@@ -28,6 +28,13 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -57,9 +64,8 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
-          </a>
-        <!-- End Profile Iamge Icon -->
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -91,6 +97,7 @@
             </li>
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
+
       </ul>
     </nav><!-- End Icons Navigation -->
 
@@ -102,7 +109,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index">
+        <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -113,7 +120,7 @@
           <i class="bi bi-journal-text"></i><span>Kelola Gudang</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
+          <li>
             <a href="forms-admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
@@ -181,33 +188,75 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Kelola Penjualan</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item">Tambah Penjualan</li>
+          <li class="breadcrumb-item active">Tambah Penjualan</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section dashboard">
-      <div class="col-xxl-4 col-md-6">
-          <h5>Anda Berhasil Login!</h5>
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Form Tambah Penjualan</h5>
+
+              <!-- General Form Elements -->
+              <form>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Penjualan</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Jumlah</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Harga</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Pembayaran</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-0 col-form-label">Tanggal Keluar</label>
+                  <div class="col-sm-12">
+                    <input type="number" class="form-control">
+                  </div>
+                </div>
+                <center>
+                <div class="row mb-3">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+                </center>
+              </form><!-- End General Form Elements -->
+            </div>
+          </div>
+        </div>
         </div>
       </div>
-
-        </div><!-- End Right side columns -->
-
-      </div>
     </section>
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>SIVENTA - Sistem Informasi Inventory Peternakan Ayam</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>SIVENTA</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

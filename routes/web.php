@@ -42,6 +42,9 @@ Route::get('/forms-pakan', function () {
 Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
 });
+Route::get('/forms-tambahpenjualan', function () {
+    return view('form/forms-tambahpenjualan');
+});
 
 Route::get('/faq', function () {
     return view('more/faq');
