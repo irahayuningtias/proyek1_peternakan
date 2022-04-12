@@ -109,7 +109,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index.html">
+        <a class="nav-link collapsed" href="index">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -145,17 +145,10 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="">
+        <a class="nav-link " href="forms-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-            <a href="forms-tambahpenjualan">
-              <i class="bi bi-circle"></i><span>Tambah Penjualan</span>
-            </a>
-          </li>
-        </ul> 
       </li>
       <!-- End Kelola Gudang -->
 

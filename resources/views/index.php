@@ -136,21 +136,14 @@
         </ul>
       </li><!-- End Forms Nav -->
 
-      <!--Kelola Gudang-->
+      <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="">
+        <a class="nav-link " href="forms-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-            <a href="forms-tambahpenjualan">
-              <i class="bi bi-circle"></i><span>Tambah Penjualan</span>
-            </a>
-          </li>
-        </ul> 
+        </a> 
       </li>
-      <!-- End Kelola Gudang -->
+      <!-- End Kelola Penjualan -->
 
       <!--Laporan-->
       <li class="nav-item">
