@@ -43,19 +43,12 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-
-    <div class="search-bar">
-      <form class="search-form d-flex align-items-center" method="POST" action="#">
-        <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-      </form>
-    </div><!-- End Search Bar -->
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
@@ -119,7 +112,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index.html">
+        <a class="nav-link collapsed" href="index">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -127,27 +120,27 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-journal-text"></i><span>Kelola Gudang</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href="forms-admin">
-              <i class="bi bi-circle"></i><span>Tambah Admin</span>
+              <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
           <li>
             <a href="forms-ternak">
-              <i class="bi bi-circle"></i><span>Tambah Ternak</span>
+              <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
             <a href="forms--pakan">
-              <i class="bi bi-circle"></i><span>Tambah Pakan</span>
+              <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
             <a href="forms-gudang">
-              <i class="bi bi-circle"></i><span>Tambah Gudang</span>
+              <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
         </ul>
@@ -161,19 +154,6 @@
         </a>
       </li>
       <!-- End Kelola Gudang -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tabel</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tabel">
-              <i class="bi bi-circle"></i><span>Data</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
 
       <!--Laporan-->
       <li class="nav-item">
