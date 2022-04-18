@@ -36,7 +36,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -136,21 +136,14 @@
         </ul>
       </li><!-- End Forms Nav -->
 
-      <!--Kelola Gudang-->
+      <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="">
+        <a class="nav-link " href="forms-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-            <a href="forms-tambahpenjualan">
-              <i class="bi bi-circle"></i><span>Tambah Penjualan</span>
-            </a>
-          </li>
-        </ul> 
+        </a> 
       </li>
-      <!-- End Kelola Gudang -->
+      <!-- End Kelola Penjualan -->
 
       <!--Laporan-->
       <li class="nav-item">
@@ -184,7 +177,7 @@
       <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index">Home</a></li>
           <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
