@@ -124,7 +124,7 @@
             </a>
           </li>
           <li>
-            <a href="tabel-ternal">
+            <a href="tabel-ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
