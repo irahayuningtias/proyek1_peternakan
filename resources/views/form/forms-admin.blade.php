@@ -250,7 +250,7 @@
                 </div>
                 <center>
                 <div class="row mb-3">
-                  <div class="col-sm-6">
+                  <div class="col-sm-12">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
