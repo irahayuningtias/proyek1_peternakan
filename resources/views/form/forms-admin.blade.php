@@ -126,17 +126,17 @@
             </a>
           </li>
           <li>
-            <a href="forms-pakan">
+            <a href="tabel-pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="forms-ternak">
+            <a href="tabel-ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="forms-gudang">
+            <a href="table-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -250,7 +250,7 @@
                 </div>
                 <center>
                 <div class="row mb-3">
-                  <div class="col-sm-6">
+                  <div class="col-sm-12">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
