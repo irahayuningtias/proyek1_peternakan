@@ -136,7 +136,7 @@
             </a>
           </li>
           <li>
-            <a href="tabel-gudang">
+            <a href="tabe-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -145,11 +145,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-<<<<<<< HEAD
         <a class="nav-link " href="tabel-tambahpenjualan">
-=======
-        <a class="nav-link " href="forms-tambahpenjualan">
->>>>>>> 50e9ff368c9d931a935980d58fc369bb8896ba5c
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
