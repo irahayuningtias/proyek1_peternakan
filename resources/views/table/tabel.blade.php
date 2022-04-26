@@ -380,11 +380,9 @@
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
+        </div>
+        </div>
 
-
-              <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body">
@@ -404,12 +402,8 @@
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
-
-
-              <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
-
+              </div>
+        </div>
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Data table ternak</h5>
@@ -428,11 +422,8 @@
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
-
-
-              <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
+              </div>
+        </div>
 
           <div class="card">
             <div class="card-body">
