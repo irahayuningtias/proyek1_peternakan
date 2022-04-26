@@ -45,7 +45,21 @@ Route::get('/forms-ternak', function () {
 Route::get('/forms-tambahpenjualan', function () {
     return view('form/forms-tambahpenjualan');
 });
-
+Route::get('/tabel-admin', function () {
+    return view('table/tabel-admin');
+});
+Route::get('/tabel-gudang', function () {
+    return view('table/tabel-gudang');
+});
+Route::get('/tabel-pakan', function () {
+    return view('table/tabel-pakan');
+});
+Route::get('/tabel-ternak', function () {
+    return view('table/tabel-ternak');
+});
+Route::get('/tabel-tambahpenjualan', function () {
+    return view('table/tabel-tambahpenjualan');
+});
 Route::get('/faq', function () {
     return view('more/faq');
 });
