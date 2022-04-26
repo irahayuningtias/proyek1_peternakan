@@ -183,7 +183,7 @@
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="tabel-admin">Kelola Gudang</a></li>
-      <li class="breadcrumb-item">Daftar Data Admin</li>
+      <li class="breadcrumb-item">Daftar Data Gudang</li>
     </ol>
   </nav>
 </div><!-- End Page Title -->
