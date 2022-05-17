@@ -152,7 +152,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tabel">
+            <a href="tabel-laporan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>

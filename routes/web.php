@@ -63,8 +63,8 @@ Route::get('/tabel-tambahpenjualan', function () {
 Route::get('/faq', function () {
     return view('more/faq');
 });
-Route::get('/tabel', function () {
-    return view('table/tabel');
+Route::get('/tabel-laporan', function () {
+    return view('table/tabel-laporan');
 });
 Route::get('/charts', function () {
     return view('charts');
