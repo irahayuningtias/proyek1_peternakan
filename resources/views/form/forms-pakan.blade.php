@@ -121,22 +121,22 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-admin">
+            <a href="tabel-admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
           <li>
-            <a href="forms-pakan">
+            <a href="tabel-pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="forms-ternak">
+            <a href="tabel-ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="forms-gudang">
+            <a href="tabel-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -145,7 +145,7 @@
 
       <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="">
+        <a class="nav-link " href="forms-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -186,7 +186,7 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item">Kelola Gudang</li>
-          <li class="breadcrumb-item active">Pakan</li>
+          <li class="breadcrumb-item active">Tambah Pakan</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
