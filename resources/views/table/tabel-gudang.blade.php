@@ -202,7 +202,7 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Daftar Gudang</h5>
-
+  
           <!-- Table with stripped rows -->
           <table class="table datatable">
             <thead>

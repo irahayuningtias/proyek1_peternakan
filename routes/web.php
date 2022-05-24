@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//use App\Http\Controllers\gudangController;
+use App\Http\Controllers\cobaGudangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,9 +56,8 @@ Route::get('/tabel-gudang', function () {
 Route::get('/tabel-pakan', function () {
     return view('table/tabel-pakan');
 });
-Route::get('/tabel-ternak', function () {
-    return view('table/tabel-ternak');
-});
+Route::get('/tabel-ternak','TernakController@index');
+
 Route::get('/tabel-tambahpenjualan', function () {
     return view('table/tabel-tambahpenjualan');
 });
