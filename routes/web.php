@@ -54,9 +54,8 @@ Route::resource('tabel-admin', AdminsController::class);
 Route::get('/tabel-gudang', function () {
     return view('table/tabel-gudang');
 });
-Route::get('/tabel-pakan', function () {
-    return view('table/tabel-pakan');
-});
+Route::resource('tabel-pakan', PakanController::class);
+
 Route::resource('tabel-ternak', TernakController::class);
 
 Route::get('/tabel-tambahpenjualan', function () {

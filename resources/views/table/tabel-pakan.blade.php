@@ -222,12 +222,12 @@
 
                   @foreach ($pakan as $var)
                   <tr>
-                    <td>{{var->id_pakan}}<td>
-                    <td>{{var->id_admin}}<td>
-                    <td>{{var->nama_pakan}}</td>
-                    <td>{{var->jumlah}}</td>
-                    <td>{{var->tanggal_beli}}</td>
-                    <td>{{var->tanggal_expired}}</td>
+                    <td>{{$var->id_pakan}}<td>
+                    <td>{{$var->id_admin}}<td>
+                    <td>{{$var->nama_pakan}}</td>
+                    <td>{{$var->jumlah}}</td>
+                    <td>{{$var->tanggal_beli}}</td>
+                    <td>{{$var->tanggal_expired}}</td>
                     @endforeach
                   </tr>
 
