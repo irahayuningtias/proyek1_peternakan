@@ -204,10 +204,26 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID Penjualan</th>
+                    <th scope="col">ID Admin</th>
+                    <th scope="col">ID Ternak</th>
+                    <th scope="col">ID Gudang</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Harga Unit</th>
                     <th scope="col">Pembayaran</th>
-                    <th scope="col">Tanggal Keluar</th>
+                    <th scope="col">Tanggal Beli</th>
+                  </tr>
+
+                  @foreach ($penjualans as $item)
+                  <tr>
+                    <td>{{$item->id_penjualan}}<td>
+                    <td>{{$item->id_admin}}<td>
+                    <td>{{$item->id_ternak}}<td>
+                    <td>{{$item->id_gudang}}<td>
+                    <td>{{$item->jumlah}}</td>
+                    <td>{{$item->harga_unit}}</td>
+                    <td>{{$item->pembayaran}}</td>
+                    <td>{{$item->tanggal_beli}}</td>
+                  @endforeach
                   </tr>
                 </thead>
               </table>
