@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\GudangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,8 @@ Route::get('/forms-tambahpenjualan', function () {
 });*/
 
 Route::resource('tabel-admin', AdminsController::class);
+
+Route::resource('table-gudang', GudangController::class);
 
 Route::get('/tabel-gudang', function () {
     return view('table/tabel-gudang');
