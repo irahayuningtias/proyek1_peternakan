@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminsController;
-
+use App\Http\Controllers\PakanController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,9 +55,8 @@ Route::resource('tabel-admin', AdminsController::class);
 Route::get('/tabel-gudang', function () {
     return view('table/tabel-gudang');
 });
-Route::get('/tabel-pakan', function () {
-    return view('table/tabel-pakan');
-});
+Route::resource('tabel-pakan', PakanController::class);
+
 Route::get('/tabel-ternak', function () {
     return view('table/tabel-ternak');
 });

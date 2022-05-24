@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admins;
+use App\Models\Pakan;
 use Illuminate\Http\Request;
 
 class PakanController extends Controller
@@ -14,9 +15,9 @@ class PakanController extends Controller
      */
     public function index()
     {
-        $pakans = Pakan::all();
-        $pakans = Pakan::OrderBy('id_pakan', 'asc')->paginate(10);
-        return view('form.tabel_pakan', ['peternakan' => $pakans]);
+        $pakan = Pakan::all();
+        $pakan = Pakan::OrderBy('id_pakan', 'asc')->paginate(10);
+        return view('table.tabel-pakan', ['pakan' => $pakan]);
     }
 
     /**
@@ -26,8 +27,8 @@ class PakanController extends Controller
      */
     public function create()
     {
-        $admins = Admins::all(); //mendapat data dari tabel pakan
-        return view('peternakan.create',['admins' =>$admins]);
+        $pakan = Pakan::all(); //mendapat data dari tabel pakan
+        return view('form.tabel-pakan',['pakan' => $pakan]);
     }
 
     /**
@@ -42,15 +43,23 @@ class PakanController extends Controller
         $request->validate([
             'id_pakan' => 'required',
             'id_admin' => 'required',
-            'nama_admin' => 'required',
+            'nama_pakan' => 'required',
             'jumlah' => 'required',
             'tanggal_beli' => 'required',
             'tangal_expired' => 'required',
         ]);
 
-        $pakans = new Pakan;
-        $pakans->id_pakan = $requesr->get('id_pakan');
-        $pakans->id_pakan = $requesr->get('id_pakan');
+        $pakan = new Pakan;
+        $pakan->id_pakan = $request->get('id_pakan');
+        $pakan->id_admin = $request->get('id_admin');
+        $pakan->nama_admin = $request->get('nama_pakan');
+        $pakan->jumlah = $request->get('jumlah');
+        $pakan->tanggal_beli = $request->get('tanggal_beli');
+        $pakan->tangal_expired = $request->get('tangal_expired');
+
+        $pakan->save();
+
+        return view('form.tabel-pakan', ['pakan' => $pakan]);
     }
 
     /**
