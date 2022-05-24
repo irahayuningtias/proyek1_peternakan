@@ -9,6 +9,6 @@ class TernakController extends Controller
 {
     public function index(){
         $data_ternak = DB::table('ternak')->get();
-        return view('table/tabel-ternak',['data_mahasiswa'=>]);
+        //return view('table/tabel-ternak',['data_ternak'=>$data_ternak]);
     }
 }
