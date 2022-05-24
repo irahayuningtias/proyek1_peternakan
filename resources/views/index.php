@@ -138,7 +138,7 @@
 
       <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-tambahpenjualan">
+        <a class="nav-link " href="tabel-penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a> 

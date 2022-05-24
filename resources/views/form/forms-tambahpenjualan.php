@@ -145,7 +145,7 @@
 
       <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-tambahpenjualan">
+        <a class="nav-link " href="tabel-penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -207,6 +207,24 @@
                   </div>
                 </div>
                 <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Admin</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Ternak</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Gudang</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
                   <label for="inputText" class="col-sm-0 col-form-label">Jumlah</label>
                   <div class="col-sm-12">
                     <input type="text" class="form-control">
@@ -225,7 +243,7 @@
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-0 col-form-label">Tanggal Keluar</label>
+                  <label for="inputNumber" class="col-sm-0 col-form-label">Tanggal Beli</label>
                   <div class="col-sm-12">
                     <input type="number" class="form-control">
                   </div>

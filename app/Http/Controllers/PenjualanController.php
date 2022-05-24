@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Admins;
 use App\Models\Ternak;
 use App\Models\Gudang;
+use App\Models\Penjualan;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class PenjualanController extends Controller
@@ -16,9 +18,9 @@ class PenjualanController extends Controller
      */
     public function index()
     {
-        $penjualans = Penjualan::all();
-        $penjualans = Penjualan::OrderBy('id_penjualan', 'asc')->paginate(10);
-        return view('table.tabel-tambahpenjualan', ['peternakan' => $penjualans]);
+        $penjualan = penjualan::all();
+        $penjualan = penjualan::OrderBy('id_penjualan', 'asc')->paginate(10);
+        return view('table.tabel-penjualan', ['penjualan' => $penjualan]);
     }
 
     /**
@@ -46,7 +48,7 @@ class PenjualanController extends Controller
 
         Penjualan::create($request->all());
 
-        return redirect()->route('table.tabel-tambahpenjualan')
+        return redirect()->route('table.tabel-penjualan')
             ->with('success', 'Penjualan Berhasil Ditambahkan');
     }
 

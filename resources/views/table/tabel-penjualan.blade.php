@@ -137,7 +137,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-tambahpenjualan">
+        <a class="nav-link " href="tabel-penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -213,7 +213,7 @@
                     <th scope="col">Tanggal Beli</th>
                   </tr>
 
-                  @foreach ($penjualans as $item)
+                  @foreach ($penjualan as $item)
                   <tr>
                     <td>{{$item->id_penjualan}}<td>
                     <td>{{$item->id_admin}}<td>

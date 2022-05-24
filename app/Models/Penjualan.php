@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Penjualan;
 
 class Penjualan extends Model
 {
@@ -16,8 +17,10 @@ class Penjualan extends Model
         'id_admin',
         'id_ternak',
         'id_gudang',
-        'tanggal_beli',
-        'tanggal_expired'
+        'jumlah',
+        'harga_unit',
+        'pembayaran',
+        'tanggal_beli'
 ];
     
 public function admins()
