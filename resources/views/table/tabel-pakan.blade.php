@@ -219,6 +219,21 @@
                     <th scope="col">Tanggal Beli</th>
                     <th scope="col">Tanggal Expired</th>
                   </tr>
+<<<<<<< HEAD
+=======
+
+                  @foreach ($pakan as $var)
+                  <tr>
+                    <td>{{$var->id_pakan}}<td>
+                    <td>{{$var->id_admin}}<td>
+                    <td>{{$var->nama_pakan}}</td>
+                    <td>{{$var->jumlah}}</td>
+                    <td>{{$var->tanggal_beli}}</td>
+                    <td>{{$var->tanggal_expired}}</td>
+                    @endforeach
+                  </tr>
+
+>>>>>>> 7e62cd8f1bdc2c2be23d6aa58d9e4cb6884f7566
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
