@@ -1,14 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use App\Http\Controllers\AdminsController;
 use App\Http\Controllers\PakanController;
-=======
-//use App\Http\Controllers\gudangController;
-use App\Http\Controllers\cobaGudangController;
+use Illuminate\Http\Request; 
 
->>>>>>> e3e30bec0768d24042c8e3419b9725f2c3b8cc11
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,22 +52,16 @@ Route::get('/forms-tambahpenjualan', function () {
 Route::get('/tabel-admin', function () {
     return view('table/tabel-admin');
 });
-Route::get('/tabel-gudang', function () {
-    return view('table/tabel-gudang');
-});
-<<<<<<< HEAD
-Route::resource('tabel-pakan', PakanController::class);
+Route::resource('tabel-admin', AdminsController::class);
 
-Route::get('/tabel-ternak', function () {
-    return view('table/tabel-ternak');
-});
-=======
+Route::resource('tabel-pakan', PakanController::class);
+Route::resource('tabel-ternak', TernakController::class);
+
 Route::get('/tabel-pakan', function () {
     return view('table/tabel-pakan');
 });
 Route::get('/tabel-ternak','TernakController@index');
 
->>>>>>> e3e30bec0768d24042c8e3419b9725f2c3b8cc11
 Route::get('/tabel-tambahpenjualan', function () {
     return view('table/tabel-tambahpenjualan');
 });

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admins;
 use App\Models\Pakan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PakanController extends Controller
 {
