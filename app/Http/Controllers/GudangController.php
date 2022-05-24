@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\gudang;
+use App\Models\Admins;
+use App\Models\Ternak;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class GudangController extends Controller
