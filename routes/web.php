@@ -2,14 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminsController;
-<<<<<<< HEAD
-use App\Http\Controllers\PenjualanController;
-use Illuminate\Http\Request;
-=======
 use App\Http\Controllers\PakanController;
 use App\Http\Controllers\TernakController;
-
->>>>>>> f5a95db1efb7076fd6a62a2fdbc2a0f9220e3f7e
+use App\Http\Controllers\GudangController;
+use App\Http\Controllers\PenjualanController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
