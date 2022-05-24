@@ -202,13 +202,27 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Ternak</th>
+                    <th scope="col">ID Pakan</th>
+                    <th scope="col">ID Admin</th>
                     <th scope="col">Jenis Ternak</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Tanggal Masuk</th>
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
+
+                  @foreach ($ternak as $item)
+                   <tr>
+                    <td>{{$item->id_ternak}}<td>
+                    <td>{{$item->id_pakan}}<td>
+                    <td>{{$item->id_admin}}<td>
+                     <td>{{$item->jenis_ternak}}</td>
+                     <td>{{$item->jumlah}}</td>
+                     <td>{{$item->tanggal_masuk}}</td>
+                     <td>{{$item->tanggal_keluar}}</td>
+                     @endforeach
+                    </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Model; 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use App\Models\Pakan;
 
 class Pakan extends Model
 {
@@ -24,5 +25,6 @@ public function admins()
 {
     return $this->belongsTo(Admins::class);
 }
+
 
 }

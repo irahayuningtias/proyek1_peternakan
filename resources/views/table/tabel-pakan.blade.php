@@ -212,13 +212,25 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Pakan</th>
+                    <th scope="col">ID Admin</th>
                     <th scope="col">Nama Pakan</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Tanggal Beli</th>
                     <th scope="col">Tanggal Expired</th>
                   </tr>
+
+                  @foreach ($pakan as $var)
+                  <tr>
+                    <td>{{$var->id_pakan}}<td>
+                    <td>{{$var->id_admin}}<td>
+                    <td>{{$var->nama_pakan}}</td>
+                    <td>{{$var->jumlah}}</td>
+                    <td>{{$var->tanggal_beli}}</td>
+                    <td>{{$var->tanggal_expired}}</td>
+                    @endforeach
+                  </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
