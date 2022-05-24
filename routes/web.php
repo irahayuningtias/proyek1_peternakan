@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\gudangController;
-use App\Http\Controllers\cobaGudangController;
+use App\Http\Controllers\AdminsController;
+use App\Http\Controllers\PakanController;
+use App\Http\Controllers\TernakController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,16 +49,15 @@ Route::get('/forms-ternak', function () {
 Route::get('/forms-tambahpenjualan', function () {
     return view('form/forms-tambahpenjualan');
 });
-Route::get('/tabel-admin', function () {
-    return view('table/tabel-admin');
-});
+Route::resource('tabel-admin', AdminsController::class);
+
 Route::get('/tabel-gudang', function () {
     return view('table/tabel-gudang');
 });
 Route::get('/tabel-pakan', function () {
     return view('table/tabel-pakan');
 });
-Route::get('/tabel-ternak','TernakController@index');
+Route::resource('tabel-ternak', TernakController::class);
 
 Route::get('/tabel-tambahpenjualan', function () {
     return view('table/tabel-tambahpenjualan');

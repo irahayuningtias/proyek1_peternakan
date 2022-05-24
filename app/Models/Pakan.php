@@ -25,4 +25,5 @@ public function admins()
     return $this->belongsTo(Admins::class);
 }
 
+
 }
