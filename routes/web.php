@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,9 +46,12 @@ Route::get('/forms-ternak', function () {
 Route::get('/forms-tambahpenjualan', function () {
     return view('form/forms-tambahpenjualan');
 });
-Route::get('/tabel-admin', function () {
+/*Route::get('/tabel-admin', function () {
     return view('table/tabel-admin');
-});
+});*/
+
+Route::resource('tabel-admin', AdminsController::class);
+
 Route::get('/tabel-gudang', function () {
     return view('table/tabel-gudang');
 });

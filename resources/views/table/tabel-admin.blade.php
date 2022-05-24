@@ -221,15 +221,25 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Admin</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">No. Telepon</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">Foto</th>
+                    <!--<th scope="col">Password</th>-->
+                    <!--<th scope="col">Foto</th>-->
                   </tr>
+
+                  @foreach ($admins as $item)
+                   <tr>
+                    <td>{{$item->id_admin}}<td>
+                     <td>{{$item->nama_admin}}</td>
+                     <td>{{$item->jenis_kelamin}}</td>
+                     <td>{{$item->alamat}}</td>
+                     <td>{{$item->no_hp}}</td>
+                     @endforeach
+                    </tr>
+                  
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
