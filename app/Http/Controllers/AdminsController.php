@@ -27,7 +27,8 @@ class AdminsController extends Controller
      */
     public function create()
     {
-
+        $admins = Admins::all();
+        return view('admins.create', ['Admin' => $admin]);
     }
 
     /**
@@ -38,7 +39,17 @@ class AdminsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validasi data
+        $request->validate([
+            'id_admin' => 'required',
+            'nama_admin' => 'required',
+            'jenis_kelamin' => 'required',
+            'alamat' => 'required',
+            'no_hp' => 'required',
+        ]);
+
+        $admin = new Admin;
+        
     }
 
     /**

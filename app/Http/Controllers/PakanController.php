@@ -28,8 +28,10 @@ class PakanController extends Controller
      */
     public function create()
     {
-        $pakan = Pakan::all(); //mendapat data dari tabel pakan
-        return view('form.tabel-pakan',['pakan' => $pakan]);
+        //$pakan = Pakan::all(); //mendapat data dari tabel pakan
+        //return view('form.tabel-pakan',['pakan' => $pakan]);
+        $admins = Admins::all();
+        return view('form.forms-pakan', ['admins' => $admins]);
     }
 
     /**
@@ -50,26 +52,36 @@ class PakanController extends Controller
             'tangal_expired' => 'required',
         ]);
 
-        $pakan = new Pakan;
-        $pakan->id_pakan = $request->get('id_pakan');
-        $pakan->id_admin = $request->get('id_admin');
-        $pakan->nama_admin = $request->get('nama_pakan');
-        $pakan->jumlah = $request->get('jumlah');
-        $pakan->tanggal_beli = $request->get('tanggal_beli');
-        $pakan->tangal_expired = $request->get('tangal_expired');
+        $pakans = new Pakan;
+        $pakans->id_pakan = $request->get('id_pakan');
+        $pakans->id_admin = $request->get('id_admin');
+        $pakans->nama_admin = $request->get('nama_pakan');
+        $pakans->jumlah = $request->get('jumlah');
+        $pakans->tanggal_beli = $request->get('tanggal_beli');
+        $pakans->tangal_expired = $request->get('tangal_expired');
+        $pakans->save();
 
-        $pakan->save();
+        $admins = new Admins;
+        $admins = $request->get('id_admin');
+        $admins->save();
 
-        return view('form.tabel-pakan', ['pakan' => $pakan]);
+        //fungsi eloquent
+        $pakans->admins()->associate($kelas);
+        $mahasiswa->save();
+
+        //jika data berhasil ditambahkan, akan kembali ke halaman utama
+        return redirect()->route('table.tabel-pakan')
+            ->with('success', 'Data Pakan Berhasil Ditambahkan');
     }
 
+    /////////////////////////////////////////////////////////////
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\Admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function show(Admins $admins)
+    public function show($id_admins)
     {
         //
     }
@@ -80,9 +92,10 @@ class PakanController extends Controller
      * @param  \App\Models\Admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function edit(Admins $admins)
+    public function edit($id_pakan)
     {
-        //
+        $Pakan = Pakan::find($id_pakan);
+        return view('form.forms-pakan', compact('Pakan'));
     }
 
     /**
