@@ -202,19 +202,33 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Daftar Gudang</h5>
-  
+
           <!-- Table with stripped rows -->
           <table class="table datatable">
             <thead>
               <tr>
-                <th scope="col">#</th>
                 <th scope="col">ID Gudang</th>
+                <th scope="col">ID Ternak</th>
+                <th scope="col">ID Admin</th>
                 <th scope="col">Jenis Hasil Ternak</th>
                 <th scope="col">Jumlah</th>
                 <th scope="col">Harga Unit</th>
                 <th scope="col">Tanggal Masuk</th>
                 <th scope="col">Tanggal Keluar/th>
               </tr>
+
+              @foreach ($gudang as $item)
+              <tr>
+                <td>{{$item->id_gudang}}</td>
+                <td>{{$item->id_ternak}}</td>
+                <td>{{$item->id_admin}}</td>
+                <td>{{$item->jenis_hasil}}</td>
+                <td>{{$item->jumlah}}</td>
+                <td>{{$item->harga_unit}}</td>
+                <td>{{$item->tanggal_masuk}}</td>
+                <td>{{$item->tanggal_keluar}}</td>
+                @endforeach
+              <tr>
             </thead>
           </table>
           <!-- End Table with stripped rows -->

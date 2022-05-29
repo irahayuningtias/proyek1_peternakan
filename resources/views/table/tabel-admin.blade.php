@@ -232,7 +232,7 @@
 
                   @foreach ($admins as $item)
                    <tr>
-                     <td>{{$item->id_admin}}<td>
+                    <td>{{$item->id_admin}}<td>
                      <td>{{$item->nama_admin}}</td>
                      <td>{{$item->jenis_kelamin}}</td>
                      <td>{{$item->alamat}}</td>

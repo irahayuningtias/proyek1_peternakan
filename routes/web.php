@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminsController;
 use App\Http\Controllers\PakanController;
 use App\Http\Controllers\TernakController;
-
+use App\Http\Controllers\GudangController;
+use App\Http\Controllers\PenjualanController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,18 +51,19 @@ Route::get('/forms-ternak', function () {
 Route::get('/forms-tambahpenjualan', function () {
     return view('form/forms-tambahpenjualan');
 });
-Route::resource('tabel-admin', AdminsController::class);
+/*Route::get('/tabel-admin', function () {
+    return view('table/tabel-admin');
+});*/
 
-Route::get('/tabel-gudang', function () {
-    return view('table/tabel-gudang');
-});
+Route::resource('tabel-admin', AdminsController::class);
+Route::resource('tabel-penjualan', PenjualanController::class);
+
+Route::resource('tabel-gudang', GudangController::class);
+
 Route::resource('tabel-pakan', PakanController::class);
 
 Route::resource('tabel-ternak', TernakController::class);
 
-Route::get('/tabel-tambahpenjualan', function () {
-    return view('table/tabel-tambahpenjualan');
-});
 Route::get('/faq', function () {
     return view('more/faq');
 });
