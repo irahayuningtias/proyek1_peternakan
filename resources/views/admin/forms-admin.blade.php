@@ -29,6 +29,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -37,13 +43,13 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-    
+
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -53,47 +59,27 @@
           </a>
         </li><!-- End Search Icon-->
 
-     <!--Profil-->
-     <li class="nav-item dropdown pe-3">
-        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
-        </a>
-        <!-- End Profile Iamge Icon -->
+        <!--Profil-->
+        <li class="nav-item dropdown pe-3">
 
-        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li class="dropdown-header">
-            <h6>Kevin Anderson</h6>
-            <span>Web Designer</span>
-        </li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-person"></i>
-            <span>My Profile</span>
-            </a>
-        </li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-gear"></i>
-            <span>Account Settings</span>
-            </a>
-        </li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
-
-        <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
               </a>
             </li>
             <li>
@@ -101,20 +87,23 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
               </a>
             </li>
-
-
-        </ul><!-- End Profile Dropdown Items -->
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
-        </ul>
-        </nav><!-- End Icons Navigation -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
 
+  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
@@ -147,7 +136,7 @@
             </a>
           </li>
           <li>
-            <a href="tabel-gudang">
+            <a href="tabe-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -170,7 +159,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-          <a href="tabel-laporan">
+            <a href="tabel-penjualan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>
@@ -188,68 +177,76 @@
       </li>
       <!--End Log Out -->
   </aside><!-- End Sidebar-->
-    </ul>
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Daftar Data Admin</h1>
+      <h1>Tambah Admin</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="tabel-admin">Kelola Gudang</a></li>
-          <li class="breadcrumb-item">Daftar Data Admin</li>
+        <li class="breadcrumb-item"><a href="tabel-admin">Kelola Gudang</a></li>
+          <li class="breadcrumb-item active">Tambah Admin</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <div class="row mb-3">
-        <div class="col-sm-6">
-            <a href ="forms-admin">
-            <button type="submit" class="btn btn-primary">Tambah Admin</button>
-        </div>
-    </div>
-
     <section class="section">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Daftar Admin</h5>
+              <h5 class="card-title">Form Tambah Admin</h5>
 
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">ID Admin</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">No. Telepon</th>
-                    <!--<th scope="col">Password</th>-->
-                    <!--<th scope="col">Foto</th>-->
-                  </tr>
-
-                  @foreach ($admins as $item)
-                   <tr>
-                    <td>{{$item->id_admin}}<td>
-                     <td>{{$item->nama_admin}}</td>
-                     <td>{{$item->jenis_kelamin}}</td>
-                     <td>{{$item->alamat}}</td>
-                     <td>{{$item->no_hp}}</td>
-                     @endforeach
-                    </tr>
-                  
-                </thead>
-              </table>
-              <!-- End Table with stripped rows -->
+              <!-- General Form Elements -->
+            
+              <form method="POST" action="{{ route('simpanadmin')}}">
+              @csrf  
+              <div class="row mb-3">
+                  <label for="id_admin" class="col-sm-0 col-form-label">ID Admin</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="id_admin" class="form-control" id="id_admin" aria-describedby="id_admin">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="nama_admin" class="col-sm-0 col-form-label">Nama Admin</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="nama_admin" class="form-control" id="nama_admin" aria-describedby="nama_admin">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="jenis_kelamin" class="col-sm-0 col-form-label">Jenis Kelamin</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="jenis_kelamin" class="form-control" id="jenis_kelamin" aria-describedby="jenis_kelamin">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="alamat" class="col-sm-0 col-form-label">Alamat</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="alamat" class="form-control" id="alamat" aria-describedby="alamat">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="no_hp" class="col-sm-0 col-form-label">NO HP</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="no_hp" class="form-control" id="no_hp" aria-describedby="no_hp">
+                  </div>
+                </div>
+                <center>
+                <div class="row mb-3">
+                  <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+                </center>
+              </form><!-- End General Form Elements -->
             </div>
           </div>
-
         </div>
       </div>
+      </div>
+      </div>
     </section>
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

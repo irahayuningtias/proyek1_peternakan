@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\admins;
+use App\Models\Admins;
 use Illuminate\Http\Request;
 
 class AdminsController extends Controller
@@ -17,7 +17,7 @@ class AdminsController extends Controller
         $admins = admins::all();
         $admins = admins::OrderBy('id_admin', 'asc')->paginate(10);
         //return $data_admins;
-        return view('table.tabel-admin', ['admins'=> $admins]);
+        return view('admin.tabel-admin', ['admin'=> $admins]);
     }
 
     /**
@@ -27,8 +27,8 @@ class AdminsController extends Controller
      */
     public function create()
     {
-        $admins = Admins::all();
-        return view('admins.create', ['Admin' => $admin]);
+        //$admins = Admins::all();
+        return view('admin.forms-admin');
     }
 
     /**
@@ -48,8 +48,16 @@ class AdminsController extends Controller
             'no_hp' => 'required',
         ]);
 
-        $admin = new Admin;
-        
+        $admin = Admin::create([
+            $admin->id_admin = $request->id_admin,
+            $admin->nama_admin = $request->nama_admin,
+            $admin->jenis_kelamin = $request->jenis_kelamin,
+            $admin->alamat = $request->alamat,
+            $admin->no_hp = $request->no_hp,
+        ]);
+
+        return redirect()->route('admin.tabel-admin')
+        ->with('success', 'data admin berhasil ditambahkan');
     }
 
     /**
