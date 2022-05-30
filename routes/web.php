@@ -42,27 +42,15 @@ Route::get('/forms-admin', function () {
 Route::get('/forms-gudang', function () {
     return view('form/forms-gudang');
 });
-Route::get('/forms-pakan', function () {
-    return view('form/forms-pakan');
-});
+//Route::get('/forms-pakan', function () {
+//    return view('form/forms-pakan');
+//});
 Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
 });
 Route::get('/forms-tambahpenjualan', function () {
     return view('form/forms-tambahpenjualan');
 });
-/*Route::get('/tabel-admin', function () {
-    return view('table/tabel-admin');
-});*/
-
-Route::resource('tabel-admin', AdminsController::class);
-Route::resource('tabel-penjualan', PenjualanController::class);
-
-Route::resource('tabel-gudang', GudangController::class);
-
-Route::resource('tabel-pakan', PakanController::class);
-
-Route::resource('tabel-ternak', TernakController::class);
 
 Route::get('/faq', function () {
     return view('more/faq');
@@ -72,7 +60,15 @@ Route::get('/tabel-laporan', function () {
 });
 Route::get('/charts', function () {
     return view('charts');
+
+Route::resource('tabel-admin', AdminsController::class);
+Route::resource('tabel-penjualan', PenjualanController::class);
+Route::resource('tabel-gudang', GudangController::class);
+Route::resource('tabel-pakan', PakanController::class);
+Route::resource('tabel-ternak', TernakController::class);
 });
+
+//Route::post('/forms-pakan', 'PakanController@store')->name('forms-pakan');
 
 /*end of web routes*/
 

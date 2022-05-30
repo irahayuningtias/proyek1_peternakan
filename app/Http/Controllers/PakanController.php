@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admins;
+use App\Models\Pakan;
 use Illuminate\Http\Request;
 
 class PakanController extends Controller
@@ -14,9 +15,9 @@ class PakanController extends Controller
      */
     public function index()
     {
-        $pakans = Pakan::all();
-        $pakans = Pakan::OrderBy('id_pakan', 'asc')->paginate(10);
-        return view('form.tabel_pakan', ['peternakan' => $pakans]);
+        $pakan = Pakan::all();
+        $pakan = Pakan::OrderBy('id_pakan', 'asc')->paginate(10);
+        return view('table.tabel-pakan', ['pakan' => $pakan]);
     }
 
     /**
@@ -26,15 +27,10 @@ class PakanController extends Controller
      */
     public function create()
     {
-<<<<<<< HEAD
         //$pakan = Pakan::all(); //mendapat data dari tabel pakan
         //return view('form.tabel-pakan',['pakan' => $pakan]);
         $admins = Admins::all();
         return view('form.forms-pakan', ['admins' => $admins]);
-=======
-        $admins = Admins::all(); //mendapat data dari tabel pakan
-        return view('peternakan.create',['admins' =>$admins]);
->>>>>>> b8731e4aefe619804cc8a5b08ef8817866da61a2
     }
 
     /**
@@ -56,7 +52,6 @@ class PakanController extends Controller
         ]);
 
         $pakans = new Pakan;
-<<<<<<< HEAD
         $pakans->id_pakan = $request->get('id_pakan');
         $pakans->id_admin = $request->get('id_admin');
         $pakans->nama_admin = $request->get('nama_pakan');
@@ -65,21 +60,17 @@ class PakanController extends Controller
         $pakans->tangal_expired = $request->get('tangal_expired');
         $pakans->save();
 
-        $admins = new Admins;
-        $admins = $request->get('id_admin');
-        $admins->save();
+        $Admins = new Admins;
+        $Admins = $request->get('id_admin');
+        $pakans->save();
 
         //fungsi eloquent
-        $pakans->admins()->associate($kelas);
-        $mahasiswa->save();
+        $pakans->kelas()->associate($kelas);
+        $pakans->save();
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
         return redirect()->route('table.tabel-pakan')
             ->with('success', 'Data Pakan Berhasil Ditambahkan');
-=======
-        $pakans->id_pakan = $requesr->get('id_pakan');
-        $pakans->id_pakan = $requesr->get('id_pakan');
->>>>>>> b8731e4aefe619804cc8a5b08ef8817866da61a2
     }
 
     /////////////////////////////////////////////////////////////
