@@ -114,7 +114,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
         <li>
-            <a href="tabel-admin">
+            <a href="admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
