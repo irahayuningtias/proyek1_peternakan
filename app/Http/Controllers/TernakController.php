@@ -7,6 +7,7 @@ use App\Models\Pakan;
 use App\Models\Admins;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\TernakRequest;
 
 class TernakController extends Controller
 {
@@ -25,7 +26,7 @@ class TernakController extends Controller
     public function create()
     {
         $datas = new Ternak;
-        return view('forms-ternak', compact(
+        return view('ternak.create', compact(
             'datas'
         ));
     }
@@ -42,8 +43,8 @@ class TernakController extends Controller
         $datas->id_ternak = $request->id_ternak;
         $datas->id_pakan = $request->id_pakan;
         $datas->id_admin = $request->id_admin;
-        $datas->jenis_ternak = $request->jenis_ternak;
         $datas->jumlah = $request->jumlah;
+        $datas->jenis_ternak = $request->jenis_ternak;
         $datas->tanggal_masuk = $request->tanggal_masuk;
         $datas->tanggal_keluar = $request->tanggal_keluar;
         $datas->save();
