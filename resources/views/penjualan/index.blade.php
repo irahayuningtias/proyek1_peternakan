@@ -113,7 +113,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tabel-admin">
+            <a href="admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
@@ -137,7 +137,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-penjualan">
+        <a class="nav-link " href="penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -185,7 +185,7 @@
 
     <div class="row mb-3">
         <div class="col-sm-6">
-            <a href ="forms-tambahpenjualan">
+            <a href ="{{ url('penjualan/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Penjualan</button>
         </div>
     </div>

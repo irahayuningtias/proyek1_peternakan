@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admins;
 use App\Models\Pakan;
 use Illuminate\Http\Request;
-use App\Http\Requests\PakanRequest;
+use App\Http\Requests\pakanRequest;
 
 class PakanController extends Controller
 {
@@ -41,22 +41,22 @@ class PakanController extends Controller
     public function store(PakanRequest $request)
     {
         //melakukan validasi data
-        $request->validate([
-            'id_pakan' => 'required',
-            'id_admin' => 'required',
-            'nama_admin' => 'required',
-            'jumlah' => 'required',
-            'tanggal_beli' => 'required',
-            'tangal_expired' => 'required',
-        ]);
+        // $request->validate([
+        //     'id_pakan' => 'required',
+        //     'id_admin' => 'required',
+        //     'nama_admin' => 'required',
+        //     'jumlah' => 'required',
+        //     'tanggal_beli' => 'required',
+        //     'tangal_expired' => 'required',
+        // ]);
 
         $model = new Pakan;
-        $model->id_pakan = $request->get('id_pakan');
-        $model->id_admin = $request->get('id_admin');
-        $model->nama_admin = $request->get('nama_pakan');
-        $model->jumlah = $request->get('jumlah');
-        $model->tanggal_beli = $request->get('tanggal_beli');
-        $model->tangal_expired = $request->get('tangal_expired');
+        $model->id_pakan = $request->id_pakan;
+        $model->id_admin = $request->id_admin;
+        $model->nama_pakan = $request->nama_pakan;
+        $model->jumlah = $request->jumlah;
+        $model->tanggal_beli = $request->tanggal_beli;
+        $model->tanggal_expired = $request->tanggal_expired;
         $model->save();
 
 
@@ -71,7 +71,7 @@ class PakanController extends Controller
         // $pakans->save();
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('pakan.create')
+        return redirect('pakan')
             ->with('success', 'Data Pakan Berhasil Ditambahkan');
     }
 
@@ -96,7 +96,7 @@ class PakanController extends Controller
     public function edit($id_pakan)
     {
         $Pakan = Pakan::find($id_pakan);
-        return view('form.forms-pakan', compact('Pakan'));
+        return view('pakan', compact('Pakan'));
     }
 
     /**
