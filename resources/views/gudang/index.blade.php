@@ -133,7 +133,7 @@
         </a>
       </li>
       <li>
-        <a href="tabel-gudang">
+        <a href="gudang">
           <i class="bi bi-circle"></i><span>Gudang</span>
         </a>
       </li>
@@ -189,9 +189,8 @@
 </div><!-- End Page Title -->
 
 <div class="row mb-3">
-    <div class="col-sm-6">
-        <a href ="forms-gudang">
-        <button type="submit" class="btn btn-primary">Tambah Gudang</button>
+        <div class="col-sm-6">    
+      <a class="btn btn-primary" button type="submit" href="{{url('gudang/create') }}">Tambah Gudang</a>
     </div>
 </div>
 
@@ -217,7 +216,7 @@
                 <th scope="col">Tanggal Keluar/th>
               </tr>
 
-              @foreach ($gudang as $item)
+              @foreach ($gudang as $key => $item)
               <tr>
                 <td>{{$item->id_gudang}}</td>
                 <td>{{$item->id_ternak}}</td>

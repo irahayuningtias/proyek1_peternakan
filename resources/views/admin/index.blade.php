@@ -29,12 +29,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin - v2.2.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -49,7 +43,7 @@
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-
+    
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -59,27 +53,47 @@
           </a>
         </li><!-- End Search Icon-->
 
-        <!--Profil-->
-        <li class="nav-item dropdown pe-3">
+     <!--Profil-->
+     <li class="nav-item dropdown pe-3">
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+        <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
+        </a>
+        <!-- End Profile Iamge Icon -->
 
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+        <li class="dropdown-header">
+            <h6>Kevin Anderson</h6>
+            <span>Web Designer</span>
+        </li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
 
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+        <li>
+            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+            <i class="bi bi-person"></i>
+            <span>My Profile</span>
+            </a>
+        </li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
+        <li>
+            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+            <i class="bi bi-gear"></i>
+            <span>Account Settings</span>
+            </a>
+        </li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
+
+        <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
               </a>
             </li>
             <li>
@@ -87,23 +101,20 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
               </a>
             </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-          </ul><!-- End Profile Dropdown Items -->
+
+
+        </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
-
-      </ul>
-    </nav><!-- End Icons Navigation -->
+        </ul>
+        </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
@@ -121,7 +132,7 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tabel-admin">
+            <a href="admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
@@ -145,7 +156,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="">
+        <a class="nav-link " href="tabel-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -159,7 +170,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tabel-laporan">
+          <a href="tabel-laporan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>
@@ -167,8 +178,8 @@
       </li>
       <!-- End Laporan -->
 
-            <!-- Log Out-->
-            <br><br><br><br><br><br><br><br><br><br><br>
+      <!-- Log Out-->
+      <br><br><br><br><br><br><br><br><br><br><br>
       <li class= "nav-item">
         <a class="nav-link " href="login">
           <i class="bi bi-box-arrow-right"></i>
@@ -177,79 +188,68 @@
       </li>
       <!--End Log Out -->
   </aside><!-- End Sidebar-->
+    </ul>
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Tambah Gudang</h1>
+      <h1>Daftar Data Admin</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item">Kelola Gudang</li>
-          <li class="breadcrumb-item active">Gudang</li>
+          <li class="breadcrumb-item"><a href="#">Kelola Gudang</a></li>
+          <li class="breadcrumb-item">Daftar Data Admin</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
+    <div class="row mb-3">
+        <div class="col-sm-6">
+            <a href ="{{ url('admin/create') }}">
+            <button type="submit" class="btn btn-primary">Tambah Admin</button>
+        </div>
+    </div>
+
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Form Tambah Gudang</h5>
+              <h5 class="card-title">Daftar Admin</h5>
 
-              <!-- General Form Elements -->
-              <form>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-0 col-form-label">ID Gudang</label>
-                  <div class="col-sm-12">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-0 col-form-label">Jenis Hasil Ternak</label>
-                  <div class="col-sm-12">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-0 col-form-label">Jumlah</label>
-                  <div class="col-sm-12">
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-0 col-form-label">Harga Unit</label>
-                  <div class="col-sm-12">
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-sm-0 col-form-label">Tanggal Masuk</label>
-                  <div class="col-sm-12">
-                    <input type="date" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-sm-0 col-form-label">Tanggal Keluar</label>
-                  <div class="col-sm-12">
-                    <input type="date" class="form-control">
-                  </div>
-                </div>
-                <center>
-                <div class="row mb-3">
-                  <div class="col-sm-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </div>
-                </center>
-              </form><!-- End General Form Elements -->
+              <!-- Table with stripped rows -->
+              <table class="table datatable" >
+                <thead>
+                  <tr>
+                    <th scope="col">ID Admin</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Jenis Kelamin</th>
+                    <th scope="col">Alamat</th>
+                    <th scope="col">No. Telepon</th>
+                    <!--<th scope="col">Password</th>-->
+                    <!--<th scope="col">Foto</th>-->
+                  </tr>
+
+                  @foreach ($model as $key=>$value)
+                   <tr>
+                     <td>{{$value->id_admin}}<td>
+                     <td>{{$value->nama_admin}}</td>
+                     <td>{{$value->jenis_kelamin}}</td>
+                     <td>{{$value->alamat}}</td>
+                     <td>{{$value->no_hp}}</td>
+                     @endforeach
+                    </tr>
+                  
+                </thead>
+              </table>
+              <!-- End Table with stripped rows -->
+            </div>
           </div>
-         </div>
+
+        </div>
       </div>
-  </div>
-</div>
-</section>
+    </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

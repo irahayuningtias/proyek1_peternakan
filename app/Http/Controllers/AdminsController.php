@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Admins;
 use Illuminate\Http\Request;
+use App\Http\Requests\AdminsRequest;
+use Illuminate\Support\Facades\File;
 
 class AdminsController extends Controller
 {
@@ -14,10 +16,10 @@ class AdminsController extends Controller
      */
     public function index()
     {
-        $admins = admins::all();
-        $admins = admins::OrderBy('id_admin', 'asc')->paginate(10);
+        $model = admins::all();
+        $model = admins::OrderBy('id_admin', 'asc')->paginate(10);
         //return $data_admins;
-        return view('admin.tabel-admin', ['admin'=> $admins]);
+        return view('admin.index', compact('model'));
     }
 
     /**
@@ -28,7 +30,8 @@ class AdminsController extends Controller
     public function create()
     {
         //$admins = Admins::all();
-        return view('admin.forms-admin');
+        $model = new Admins;
+        return view('admin.create', compact('model'));
     }
 
     /**
@@ -37,27 +40,27 @@ class AdminsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(AdminsRequest $request)
     {
         //validasi data
-        $request->validate([
+        /*$request->validate([
             'id_admin' => 'required',
             'nama_admin' => 'required',
             'jenis_kelamin' => 'required',
             'alamat' => 'required',
             'no_hp' => 'required',
-        ]);
+        ]);*/
 
-        $admin = Admin::create([
-            $admin->id_admin = $request->id_admin,
-            $admin->nama_admin = $request->nama_admin,
-            $admin->jenis_kelamin = $request->jenis_kelamin,
-            $admin->alamat = $request->alamat,
-            $admin->no_hp = $request->no_hp,
-        ]);
+        $model = new Admins;
+            $model->id_admin = $request->id_admin;
+            $model->nama_admin = $request->nama_admin;
+            $model->jenis_kelamin = $request->jenis_kelamin;
+            $model->alamat = $request->alamat;
+            $model->no_hp = $request->no_hp;
+            $model->save();
 
-        return redirect()->route('admin.tabel-admin')
-        ->with('success', 'data admin berhasil ditambahkan');
+        return redirect('admin')
+        ->with('success', 'data berhasil ditambahkan');
     }
 
     /**

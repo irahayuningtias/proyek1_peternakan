@@ -36,7 +36,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -54,11 +54,12 @@
 
         <!--Profil-->
         <li class="nav-item dropdown pe-3">
-            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
-            </a>
-            <!-- End Profile Iamge Icon -->
+          </a>
+        <!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -88,30 +89,20 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
-
       </ul>
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
 
+  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index">
+        <a class="nav-link " href="index">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -122,13 +113,13 @@
           <i class="bi bi-journal-text"></i><span>Kelola Gudang</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tabel-admin">
+        <li>
+            <a href="admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
           <li>
-            <a href="tabel-pakan">
+            <a href="pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
@@ -138,21 +129,21 @@
             </a>
           </li>
           <li>
-            <a href="tabel-gudang">
+            <a href="gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
         </ul>
       </li><!-- End Forms Nav -->
 
-      <!--Kelola Gudang-->
+      <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-tambahpenjualan">
+        <a class="nav-link " href="tabel-penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
-        </a>
+        </a> 
       </li>
-      <!-- End Kelola Gudang -->
+      <!-- End Kelola Penjualan -->
 
       <!--Laporan-->
       <li class="nav-item">
@@ -161,7 +152,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-          <a href="tabel-laporan">
+            <a href="tabel-laporan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>
@@ -179,74 +170,37 @@
       </li>
       <!--End Log Out -->
   </aside><!-- End Sidebar-->
-    </ul>
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Daftar Data Pakan</h1>
+      <h1>Dashboard</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index">Kelola Gudang</a></li>
-          <li class="breadcrumb-item">Daftar Data Admin</li>
+          <li class="breadcrumb-item"><a href="index">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <div class="row mb-3">
-        <div class="col-sm-6">
-        <a href ="{{ url('pakan/create') }}">
-            <button type="submit" class="btn btn-primary">Tambah Pakan</button>
+    <section class="section dashboard">
+      <div class="col-xxl-4 col-md-6">
+          <h5>Anda Berhasil Login!</h5>
         </div>
-    </div>
+      </div>
 
-      <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
+        </div><!-- End Right side columns -->
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Daftar Pakan</h5>
-
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">ID Pakan</th>
-                    <th scope="col">ID Admin</th>
-                    <th scope="col">Nama Pakan</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Tanggal Beli</th>
-                    <th scope="col">Tanggal Expired</th>
-                  </tr>
-
-                  @foreach ($pakans as $key=>$value)
-                  <tr>
-                    <td>{{$value->id_pakan}}<td>
-                    <td>{{$value->id_admin}}<td>
-                    <td>{{$value->nama_pakan}}</td>
-                    <td>{{$value->jumlah}}</td>
-                    <td>{{$value->tanggal_beli}}</td>
-                    <td>{{$value->tanggal_expired}}</td>
-                    @endforeach
-                  </tr>
-
-                </thead>
-              </table>
-              <!-- End Table with stripped rows -->
-            </div>
-          </div>
-
-        </div>
       </div>
     </section>
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>SIVENTA</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>SIVENTA - Sistem Informasi Inventory Peternakan Ayam</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

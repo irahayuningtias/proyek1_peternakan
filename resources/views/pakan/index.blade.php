@@ -28,13 +28,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceAdmin - v2.2.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -61,11 +54,11 @@
 
         <!--Profil-->
         <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
+            </a>
+            <!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -95,6 +88,16 @@
             <li>
               <hr class="dropdown-divider">
             </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
 
@@ -103,7 +106,6 @@
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
@@ -136,7 +138,7 @@
             </a>
           </li>
           <li>
-            <a href="tabe-gudang">
+            <a href="tabel-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -159,7 +161,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tabel-penjualan">
+          <a href="tabel-laporan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>
@@ -177,76 +179,68 @@
       </li>
       <!--End Log Out -->
   </aside><!-- End Sidebar-->
+    </ul>
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Tambah Admin</h1>
+      <h1>Daftar Data Pakan</h1>
       <nav>
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="tabel-admin">Kelola Gudang</a></li>
-          <li class="breadcrumb-item active">Tambah Admin</li>
+          <li class="breadcrumb-item"><a href="index">Kelola Gudang</a></li>
+          <li class="breadcrumb-item">Daftar Data Admin</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
+    <div class="row mb-3">
+        <div class="col-sm-6">
+        <a href ="{{ url('pakan/create') }}">
+            <button type="submit" class="btn btn-primary">Tambah Pakan</button>
+        </div>
+    </div>
+
+      <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Form Tambah Admin</h5>
+              <h5 class="card-title">Daftar Pakan</h5>
 
-              <!-- General Form Elements -->
-            
-              <form method="POST" action="{{ route('simpanadmin')}}">
-              @csrf  
-              <div class="row mb-3">
-                  <label for="id_admin" class="col-sm-0 col-form-label">ID Admin</label>
-                  <div class="col-sm-12">
-                    <input type="text" name="id_admin" class="form-control" id="id_admin" aria-describedby="id_admin">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="nama_admin" class="col-sm-0 col-form-label">Nama Admin</label>
-                  <div class="col-sm-12">
-                    <input type="text" name="nama_admin" class="form-control" id="nama_admin" aria-describedby="nama_admin">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="jenis_kelamin" class="col-sm-0 col-form-label">Jenis Kelamin</label>
-                  <div class="col-sm-12">
-                    <input type="text" name="jenis_kelamin" class="form-control" id="jenis_kelamin" aria-describedby="jenis_kelamin">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="alamat" class="col-sm-0 col-form-label">Alamat</label>
-                  <div class="col-sm-12">
-                    <input type="text" name="alamat" class="form-control" id="alamat" aria-describedby="alamat">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="no_hp" class="col-sm-0 col-form-label">NO HP</label>
-                  <div class="col-sm-12">
-                    <input type="text" name="no_hp" class="form-control" id="no_hp" aria-describedby="no_hp">
-                  </div>
-                </div>
-                <center>
-                <div class="row mb-3">
-                  <div class="col-sm-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </div>
-                </center>
-              </form><!-- End General Form Elements -->
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">ID Pakan</th>
+                    <th scope="col">ID Admin</th>
+                    <th scope="col">Nama Pakan</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Tanggal Beli</th>
+                    <th scope="col">Tanggal Expired</th>
+                  </tr>
+
+                  @foreach ($pakans as $key=>$value)
+                  <tr>
+                    <td>{{$value->id_pakan}}<td>
+                    <td>{{$value->id_admin}}<td>
+                    <td>{{$value->nama_pakan}}</td>
+                    <td>{{$value->jumlah}}</td>
+                    <td>{{$value->tanggal_beli}}</td>
+                    <td>{{$value->tanggal_expired}}</td>
+                    @endforeach
+                  </tr>
+
+                </thead>
+              </table>
+              <!-- End Table with stripped rows -->
             </div>
           </div>
+
         </div>
       </div>
-      </div>
-      </div>
     </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
