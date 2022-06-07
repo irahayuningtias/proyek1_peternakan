@@ -28,6 +28,13 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -36,7 +43,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="dashboard" class="logo d-flex align-items-center">
+      <a href="index" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -57,7 +64,7 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
           </a>
         <!-- End Profile Iamge Icon -->
 
@@ -102,7 +109,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="dashboard">
+        <a class="nav-link collapsed" href="index">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -113,13 +120,13 @@
           <i class="bi bi-journal-text"></i><span>Kelola Gudang</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
-            <a href="admin">
+          <li>
+            <a href="tabel-admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
           <li>
-            <a href="pakan">
+            <a href="tabel-pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
@@ -129,7 +136,7 @@
             </a>
           </li>
           <li>
-            <a href="gudang">
+            <a href="tabel-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -138,13 +145,14 @@
 
       <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="penjualan">
+        <a class="nav-link " href="forms-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
-        </a> 
+        </a>
       </li>
       <!-- End Kelola Penjualan -->
 
+      
       <!--Laporan-->
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -161,7 +169,7 @@
       <!-- End Laporan -->
 
       <!-- Log Out-->
-      <br><br><br><br><br><br><br><br><br><br><br>
+       <br><br><br><br><br><br><br><br><br><br><br>
       <li class= "nav-item">
         <a class="nav-link " href="login">
           <i class="bi bi-box-arrow-right"></i>
@@ -174,33 +182,83 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Tambah Pakan</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item">Kelola Gudang</li>
+          <li class="breadcrumb-item active">Tambah Pakan</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section dashboard">
-      <div class="col-xxl-4 col-md-6">
-          <h5>Anda Berhasil Login!</h5>
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Form Tambah Pakan</h5>
+
+              <!-- General Form Elements -->
+              <form>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Pakan</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Admin</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Nama Pakan</label>
+                  <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Jumlah</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Tanggal Beli</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Tanggal Expired</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <center>
+                <div class="row mb-3">
+                  <label class="col-sm-12">
+                  <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+                <center>
+              </form><!-- End General Form Elements -->
+            </div>
+          </div>
         </div>
-      </div>
-
-        </div><!-- End Right side columns -->
-
-      </div>
+          </div>
+          </div>
     </section>
-
-  </main><!-- End #main -->
+</main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>SIVENTA - Sistem Informasi Inventory Peternakan Ayam</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>SIVENTA</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

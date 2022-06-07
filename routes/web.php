@@ -37,18 +37,14 @@ Route::get('/contact', function () {
     return view('more/contact');
 });
 
-Route::get('/forms-gudang', function () {
-    return view('form/forms-gudang');
-});
-/////
-Route::get('/forms-pakan', function () {
-    return view('form/forms-pakan');
-});
+// Route::get('/forms-pakan', function () {
+//     return view('form/forms-pakan');
+// });
 
-Route::post('/forms-pakan', 'PakanController@store')->name('forms-pakan');
-//
+// Route::post('/forms-pakan', 'PakanController@store')->name('forms-pakan');
+// //
 
-Route::get('/forms-ternak', function () {
+/*Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
 });
 
@@ -65,7 +61,6 @@ Route::get('/tabel-laporan', function () {
 Route::get('/charts', function () {
     return view('charts');
 });
-
 
 Route::resource('penjualan', PenjualanController::class);
 Route::resource('tabel-gudang', GudangController::class);

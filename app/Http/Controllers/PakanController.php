@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admins;
 use App\Models\Pakan;
 use Illuminate\Http\Request;
+use App\Http\Requests\pakanRequest;
 
 class PakanController extends Controller
 {
@@ -15,9 +16,9 @@ class PakanController extends Controller
      */
     public function index()
     {
-        $pakan = Pakan::all();
-        $pakan = Pakan::OrderBy('id_pakan', 'asc')->paginate(10);
-        return view('table.tabel-pakan', ['pakan' => $pakan]);
+        $pakans = pakan::all();
+        $pakans = pakan::OrderBy('id_pakan', 'asc')->paginate(10);
+        return view('pakan.index', compact('pakans'));
     }
 
     /**
@@ -27,10 +28,8 @@ class PakanController extends Controller
      */
     public function create()
     {
-        //$pakan = Pakan::all(); //mendapat data dari tabel pakan
-        //return view('form.tabel-pakan',['pakan' => $pakan]);
-        $admins = Admins::all();
-        return view('form.forms-pakan', ['admins' => $admins]);
+        $model = new pakan;
+        return view('pakan.create', compact('model'));
     }
 
     /**
@@ -39,37 +38,40 @@ class PakanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PakanRequest $request)
     {
         //melakukan validasi data
-        $request->validate([
-            'id_pakan' => 'required',
-            'id_admin' => 'required',
-            'nama_admin' => 'required',
-            'jumlah' => 'required',
-            'tanggal_beli' => 'required',
-            'tangal_expired' => 'required',
-        ]);
+        // $request->validate([
+        //     'id_pakan' => 'required',
+        //     'id_admin' => 'required',
+        //     'nama_admin' => 'required',
+        //     'jumlah' => 'required',
+        //     'tanggal_beli' => 'required',
+        //     'tangal_expired' => 'required',
+        // ]);
 
-        $pakans = new Pakan;
-        $pakans->id_pakan = $request->get('id_pakan');
-        $pakans->id_admin = $request->get('id_admin');
-        $pakans->nama_admin = $request->get('nama_pakan');
-        $pakans->jumlah = $request->get('jumlah');
-        $pakans->tanggal_beli = $request->get('tanggal_beli');
-        $pakans->tangal_expired = $request->get('tangal_expired');
-        $pakans->save();
+        $model = new Pakan;
+        $model->id_pakan = $request->id_pakan;
+        $model->id_admin = $request->id_admin;
+        $model->nama_pakan = $request->nama_pakan;
+        $model->jumlah = $request->jumlah;
+        $model->tanggal_beli = $request->tanggal_beli;
+        $model->tanggal_expired = $request->tanggal_expired;
+        $model->save();
 
-        $Admins = new Admins;
-        $Admins = $request->get('id_admin');
-        $pakans->save();
+
+
+
+        // $Admins = new Admins;
+        // $Admins = $request->get('id_admin');
+        // $pakans->save();
 
         //fungsi eloquent
-        $pakans->kelas()->associate($kelas);
-        $pakans->save();
+        // $pakans->kelas()->associate($kelas);
+        // $pakans->save();
 
         //jika data berhasil ditambahkan, akan kembali ke halaman utama
-        return redirect()->route('table.tabel-pakan')
+        return redirect('pakan')
             ->with('success', 'Data Pakan Berhasil Ditambahkan');
     }
 
@@ -94,7 +96,7 @@ class PakanController extends Controller
     public function edit($id_pakan)
     {
         $Pakan = Pakan::find($id_pakan);
-        return view('form.forms-pakan', compact('Pakan'));
+        return view('pakan', compact('Pakan'));
     }
 
     /**
