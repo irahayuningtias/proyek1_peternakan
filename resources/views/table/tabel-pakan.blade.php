@@ -28,13 +28,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceAdmin - v2.2.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -43,7 +36,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -61,11 +54,11 @@
 
         <!--Profil-->
         <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
+            </a>
+            <!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -95,6 +88,13 @@
             <li>
               <hr class="dropdown-divider">
             </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -106,7 +106,6 @@
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
@@ -129,13 +128,13 @@
             </a>
           </li>
           <li>
-            <a href="tabel-ternak">
-              <i class="bi bi-circle"></i><span>Ternak</span>
+            <a href="tabel-pakan">
+              <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="tabel-pakan">
-              <i class="bi bi-circle"></i><span>Pakan</span>
+            <a href="tabel-ternak">
+              <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
@@ -148,7 +147,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="forms-tambahpenjualan">
+        <a class="nav-link " href="tabel-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -162,7 +161,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tabel-laporan">
+          <a href="tabel-laporan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>
@@ -170,8 +169,8 @@
       </li>
       <!-- End Laporan -->
 
-            <!-- Log Out-->
-            <br><br><br><br><br><br><br><br><br><br><br>
+      <!-- Log Out-->
+      <br><br><br><br><br><br><br><br><br><br><br>
       <li class= "nav-item">
         <a class="nav-link " href="login">
           <i class="bi bi-box-arrow-right"></i>
@@ -180,74 +179,68 @@
       </li>
       <!--End Log Out -->
   </aside><!-- End Sidebar-->
+    </ul>
+
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Tambah Ternak</h1>
-  <nav>
-    <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="ternak.forms-ternak">Kelola Gudang</a></li>
-
-      <li class="breadcrumb-item active">Tambah Ternak</li>
-    <form method="POST" action="{{ url('ternak') }}">
-    </ol>
-  </nav>
+      <h1>Daftar Data Pakan</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index">Kelola Gudang</a></li>
+          <li class="breadcrumb-item">Daftar Data Admin</li>
+        </ol>
+      </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
+    <div class="row mb-3">
+        <div class="col-sm-6">
+        <a href ="{{ url('pakan/create') }}">
+            <button type="submit" class="btn btn-primary">Tambah Pakan</button>
+        </div>
+    </div>
+
+      <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Form Tambah Ternak</h5>
+              <h5 class="card-title">Daftar Pakan</h5>
 
-              <!-- General Form Elements -->
-              <form>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-0 col-form-label">ID Ternak</label>
-                  <div class="col-sm-12">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-0 col-form-label">Jenis Ternak</label>
-                  <div class="col-sm-12">
-                    <input type="text" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-0 col-form-label">Jumlah</label>
-                  <div class="col-sm-12">
-                    <input type="number" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-sm-0 col-form-label">Tanggal Masuk</label>
-                  <div class="col-sm-12">
-                    <input type="date" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputDate" class="col-sm-0 col-form-label">Tanggal Keluar</label>
-                  <div class="col-sm-12">
-                    <input type="date" class="form-control">
-                  </div>
-                </div>
-                <center>
-                <div class="row mb-3">
-                  <div class="col-sm-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                </div>
-                </center>
-              </form><!-- End General Form Elements -->
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">ID Pakan</th>
+                    <th scope="col">ID Admin</th>
+                    <th scope="col">Nama Pakan</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Tanggal Beli</th>
+                    <th scope="col">Tanggal Expired</th>
+                  </tr>
+
+                  @foreach ($pakans as $key=>$value)
+                  <tr>
+                    <td>{{$value->id_pakan}}<td>
+                    <td>{{$value->id_admin}}<td>
+                    <td>{{$value->nama_pakan}}</td>
+                    <td>{{$value->jumlah}}</td>
+                    <td>{{$value->tanggal_beli}}</td>
+                    <td>{{$value->tanggal_expired}}</td>
+                    @endforeach
+                  </tr>
+
+                </thead>
+              </table>
+              <!-- End Table with stripped rows -->
+            </div>
           </div>
-         </div>
+
+        </div>
       </div>
-  </div>
-</div>
-</section>
+    </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
