@@ -65,7 +65,8 @@
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-          </a><!-- End Profile Iamge Icon -->
+          </a>
+        <!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -95,12 +96,8 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
-
       </ul>
     </nav><!-- End Icons Navigation -->
 
@@ -129,13 +126,13 @@
             </a>
           </li>
           <li>
-            <a href="tabel-ternak">
-              <i class="bi bi-circle"></i><span>Ternak</span>
+            <a href="tabel-pakan">
+              <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="tabel-pakan">
-              <i class="bi bi-circle"></i><span>Pakan</span>
+            <a href="tabel-ternak">
+              <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
@@ -146,15 +143,16 @@
         </ul>
       </li><!-- End Forms Nav -->
 
-      <!--Kelola Gudang-->
+      <!--Kelola Penjualan-->
       <li class="nav-item">
         <a class="nav-link " href="forms-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
       </li>
-      <!-- End Kelola Gudang -->
+      <!-- End Kelola Penjualan -->
 
+      
       <!--Laporan-->
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
@@ -170,8 +168,8 @@
       </li>
       <!-- End Laporan -->
 
-            <!-- Log Out-->
-            <br><br><br><br><br><br><br><br><br><br><br>
+      <!-- Log Out-->
+       <br><br><br><br><br><br><br><br><br><br><br>
       <li class= "nav-item">
         <a class="nav-link " href="login">
           <i class="bi bi-box-arrow-right"></i>
@@ -180,18 +178,17 @@
       </li>
       <!--End Log Out -->
   </aside><!-- End Sidebar-->
+
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Tambah Ternak</h1>
-  <nav>
-    <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="ternak.forms-ternak">Kelola Gudang</a></li>
-
-      <li class="breadcrumb-item active">Tambah Ternak</li>
-    <form method="POST" action="{{ url('ternak') }}">
-    </ol>
-  </nav>
+      <h1>Tambah Pakan</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Kelola Gudang</li>
+          <li class="breadcrumb-item active">Tambah Pakan</li>
+        </ol>
+      </nav>
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -200,55 +197,63 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Form Tambah Ternak</h5>
+              <h5 class="card-title">Form Tambah Pakan</h5>
 
               <!-- General Form Elements -->
               <form>
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-0 col-form-label">ID Ternak</label>
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Pakan</label>
                   <div class="col-sm-12">
                     <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputText" class="col-sm-0 col-form-label">Jenis Ternak</label>
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Admin</label>
                   <div class="col-sm-12">
                     <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-0 col-form-label">Jumlah</label>
+                  <label for="inputText" class="col-sm-0 col-form-label">Nama Pakan</label>
                   <div class="col-sm-12">
-                    <input type="number" class="form-control">
+                  <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputDate" class="col-sm-0 col-form-label">Tanggal Masuk</label>
+                  <label for="inputText" class="col-sm-0 col-form-label">Jumlah</label>
                   <div class="col-sm-12">
-                    <input type="date" class="form-control">
+                    <input type="text" class="form-control">
                   </div>
                 </div>
                 <div class="row mb-3">
-                  <label for="inputDate" class="col-sm-0 col-form-label">Tanggal Keluar</label>
+                  <label for="inputText" class="col-sm-0 col-form-label">Tanggal Beli</label>
                   <div class="col-sm-12">
-                    <input type="date" class="form-control">
+                    <input type="text" class="form-control">
                   </div>
                 </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">Tanggal Expired</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
                 <center>
                 <div class="row mb-3">
-                  <div class="col-sm-12">
+                  <label class="col-sm-12">
+                  <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </div>
                 </div>
-                </center>
+                <center>
               </form><!-- End General Form Elements -->
+            </div>
           </div>
-         </div>
-      </div>
-  </div>
-</div>
-</section>
-  </main><!-- End #main -->
+        </div>
+          </div>
+          </div>
+    </section>
+</main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
