@@ -220,14 +220,14 @@
                     <th scope="col">Tanggal Expired</th>
                   </tr>
 
-                  @foreach ($pakan as $var)
+                  @foreach ($pakans as $key=>$value)
                   <tr>
-                    <td>{{$var->id_pakan}}<td>
-                    <td>{{$var->id_admin}}<td>
-                    <td>{{$var->nama_pakan}}</td>
-                    <td>{{$var->jumlah}}</td>
-                    <td>{{$var->tanggal_beli}}</td>
-                    <td>{{$var->tanggal_expired}}</td>
+                    <td>{{$value->id_pakan}}<td>
+                    <td>{{$value->id_admin}}<td>
+                    <td>{{$value->nama_pakan}}</td>
+                    <td>{{$value->jumlah}}</td>
+                    <td>{{$value->tanggal_beli}}</td>
+                    <td>{{$value->tanggal_expired}}</td>
                     @endforeach
                   </tr>
 

@@ -15,9 +15,9 @@ class PakanController extends Controller
      */
     public function index()
     {
-        $pakan = Pakan::all();
-        $pakan = Pakan::OrderBy('id_pakan', 'asc')->paginate(10);
-        return view('table.tabel-pakan', ['pakan' => $pakan]);
+        $pakans = pakan::all();
+        $pakans = pakan::OrderBy('id_pakan', 'asc')->paginate(10);
+        return view('pakan.tabel-pakan', compact('pakans'));
     }
 
     /**
@@ -27,10 +27,7 @@ class PakanController extends Controller
      */
     public function create()
     {
-        //$pakan = Pakan::all(); //mendapat data dari tabel pakan
-        //return view('form.tabel-pakan',['pakan' => $pakan]);
-        $admins = Admins::all();
-        return view('form.forms-pakan', ['admins' => $admins]);
+        return view('forms-pakan', compact('pakan'));
     }
 
     /**
