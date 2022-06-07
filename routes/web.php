@@ -38,7 +38,7 @@ Route::get('/contact', function () {
 });
 /*Route::get('/forms-gudang', function () {
     return view('form/forms-gudang');
-});
+});*/
 /////
 // Route::get('/forms-pakan', function () {
 //     return view('form/forms-pakan');
