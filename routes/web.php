@@ -21,8 +21,8 @@ use Illuminate\Http\Request;
 
 /*start web routes*/
 
-Route::get('/index', function () {
-    return view('index');
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
 Route::get('/login', function () {
     return view('more/login');
@@ -37,24 +37,16 @@ Route::get('/contact', function () {
     return view('more/contact');
 });
 
-//admin route
-Route::resource('tabel-admin', AdminsController::class);
-
-//Route::get('forms/forms-admin', [AdminsController::class, 'tambahadmin'])->name('tambahadmin');
-
-//Route::post('/simpanadmin', [AdminsController::class, 'simpanadmin'])->name('simpanadmin');
-///
-
-/*Route::get('/forms-gudang', function () {
+Route::get('/forms-gudang', function () {
     return view('form/forms-gudang');
-});*/
+});
 /////
 Route::get('/forms-pakan', function () {
     return view('form/forms-pakan');
 });
 
 Route::post('/forms-pakan', 'PakanController@store')->name('forms-pakan');
-////
+//
 
 Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
@@ -78,6 +70,18 @@ Route::resource('tabel-penjualan', PenjualanController::class);
 Route::resource('gudang', GudangController::class);
 Route::resource('tabel-pakan', PakanController::class);
 Route::resource('tabel-ternak', TernakController::class);
+
+//ini route untuk CRUD tabel Admin
+//Route::resource('tabel-admin', AdminsController::class);
+//Route::resource('admin.forms-admin', AdminsController::class);
+
+//admin route
+Route::resource('admin', AdminsController::class);
+
+//Route::get('admin/tabel-admin', AdminsController::class);
+
+//Route::post('/simpanadmin', [AdminsController::class, 'simpanadmin'])->name('simpanadmin');
+///
 
 
 
