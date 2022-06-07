@@ -12,8 +12,8 @@ class TernakController extends Controller
 {
     public function index(){
         $ternak = Ternak::all();
-
-        return view('tabel-ternak', compact(
+        $ternak = Ternak::OrderBy('id_ternak', 'asc')->paginate(10);
+        return view('ternak.index', compact(
             'ternak'
         ));
     }
@@ -48,7 +48,8 @@ class TernakController extends Controller
         $datas->tanggal_keluar = $request->tanggal_keluar;
         $datas->save();
 
-        return redirect('ternak');
+        return redirect('ternak')
+        ->with('success', 'data ternak berhasil ditambahkan');
 
     }
 

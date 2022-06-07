@@ -211,7 +211,7 @@
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
 
-                  @foreach ($ternak as $item)
+                  @foreach ($ternak as $key=>$item)
                    <tr>
                     <td>{{$item->id_ternak}}<td>
                     <td>{{$item->id_pakan}}<td>

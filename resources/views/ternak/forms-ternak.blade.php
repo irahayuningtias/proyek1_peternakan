@@ -189,7 +189,6 @@
     <li class="breadcrumb-item"><a href="ternak.forms-ternak">Kelola Gudang</a></li>
 
       <li class="breadcrumb-item active">Tambah Ternak</li>
-    <form method="POST" action="{{ url('ternak') }}">
     </ol>
   </nav>
     </div><!-- End Page Title -->
@@ -203,9 +202,16 @@
               <h5 class="card-title">Form Tambah Ternak</h5>
 
               <!-- General Form Elements -->
-              <form>
+              <form method="POST" action="{{ url('ternak') }}">
+                @csrf
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-0 col-form-label">ID Ternak</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-0 col-form-label">ID Admin</label>
                   <div class="col-sm-12">
                     <input type="text" class="form-control">
                   </div>
