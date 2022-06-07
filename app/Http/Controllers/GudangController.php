@@ -30,7 +30,8 @@ class GudangController extends Controller
      */
     public function create()
     {
-        return view('gudang.forms-gudang');
+        $model = new gudang;
+        return view('forms-gudang', compact('model'));
     }
 
     /**

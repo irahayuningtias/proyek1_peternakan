@@ -195,7 +195,7 @@
 
     <div class="row mb-3">
         <div class="col-sm-6">
-            <a href ="forms-pakan">
+        <a href ="{{ url('pakan/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Pakan</button>
         </div>
     </div>

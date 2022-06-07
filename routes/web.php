@@ -41,12 +41,12 @@ Route::get('/forms-gudang', function () {
     return view('form/forms-gudang');
 });
 /////
-Route::get('/forms-pakan', function () {
-    return view('form/forms-pakan');
-});
+// Route::get('/forms-pakan', function () {
+//     return view('form/forms-pakan');
+// });
 
-Route::post('/forms-pakan', 'PakanController@store')->name('forms-pakan');
-//
+// Route::post('/forms-pakan', 'PakanController@store')->name('forms-pakan');
+// //
 
 Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
@@ -68,7 +68,7 @@ Route::get('/charts', function () {
 
 Route::resource('tabel-penjualan', PenjualanController::class);
 Route::resource('gudang', GudangController::class);
-Route::resource('tabel-pakan', PakanController::class);
+Route::resource('pakan', PakanController::class);
 Route::resource('tabel-ternak', TernakController::class);
 
 //ini route untuk CRUD tabel Admin

@@ -119,7 +119,7 @@
             </a>
           </li>
           <li>
-            <a href="tabel-pakan">
+            <a href="pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
