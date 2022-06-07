@@ -56,9 +56,9 @@ Route::get('/forms-pakan', function () {
 Route::post('/forms-pakan', 'PakanController@store')->name('forms-pakan');
 ////
 
-Route::get('/forms-ternak', function () {
+/*Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
-});
+});*/
 Route::get('/forms-tambahpenjualan', function () {
     return view('form/forms-tambahpenjualan');
 });
@@ -78,6 +78,7 @@ Route::resource('tabel-penjualan', PenjualanController::class);
 Route::resource('tabel-gudang', GudangController::class);
 Route::resource('tabel-pakan', PakanController::class);
 Route::resource('tabel-ternak', TernakController::class);
+Route::resource('forms-ternak', TernakController::class);
 
 
 

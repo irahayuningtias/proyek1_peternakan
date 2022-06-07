@@ -186,8 +186,10 @@
       <h1>Tambah Ternak</h1>
   <nav>
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="tabel-ternak">Kelola Gudang</a></li>
+    <li class="breadcrumb-item"><a href="ternak.forms-ternak">Kelola Gudang</a></li>
+
       <li class="breadcrumb-item active">Tambah Ternak</li>
+    <form method="POST" action="{{ url('ternak') }}">
     </ol>
   </nav>
     </div><!-- End Page Title -->
