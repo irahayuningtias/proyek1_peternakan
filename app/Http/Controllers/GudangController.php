@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\gudang;
 use App\Models\Admins;
 use App\Models\Ternak;
+use App\Http\Requests\GudangRequests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class GudangController extends Controller
     {
         $gudang = gudang::all();
         $gudang = gudang::OrderBy('id_gudang', 'asc')->paginate(10);
-        return view('table.tabel-gudang', ['gudang'=>$gudang]);
+        return view('gudang.index', compact('gudang'));
     }
 
     /**
@@ -30,7 +31,8 @@ class GudangController extends Controller
      */
     public function create()
     {
-        return view('gudang.forms-gudang');
+        $model = new Gudang;
+        return view('gudang.create', compact('model'));
     }
 
     /**
@@ -43,12 +45,15 @@ class GudangController extends Controller
     {
         $model = new Gudang;
         $model ->id_gudang = $request->id_gudang;
+        $model ->id_ternak = $request->id_ternak;
+        $model ->id_admin = $request->id_admin;
         $model ->jenis_hasil = $request->jenis_hasil;
         $model ->jumlah = $request->jumlah;
         $model ->harga_unit = $request->harga_unit;
         $model ->tanggal_masuk = $request->tanggal_masuk;
         $model ->tanggal_keluar = $request->tanggal_keluar;
         $model -> save();
+        //$ternak = new Ternak;
 
         return redirect('gudang')
         ->with('success', 'data admin berhasil ditambahkan');
