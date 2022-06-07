@@ -66,8 +66,7 @@ Route::get('/charts', function () {
 Route::resource('tabel-penjualan', PenjualanController::class);
 Route::resource('gudang', GudangController::class);
 Route::resource('pakan', PakanController::class);
-Route::resource('tabel-ternak', TernakController::class);
-Route::resource('forms-ternak', TernakController::class);
+Route::resource('ternak', TernakController::class);
 
 //ini route untuk CRUD tabel Admin
 //Route::resource('tabel-admin', AdminsController::class);
