@@ -43,7 +43,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="dashboard" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -109,7 +109,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index">
+        <a class="nav-link collapsed" href="dashboard
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -145,7 +145,7 @@
 
       <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-penjualan">
+        <a class="nav-link " href="penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -184,8 +184,9 @@
       <h1>Kelola Penjualan</h1>
       <nav>
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="tabel-admin">Tambah Penjualan</a></li>
+        <li class="breadcrumb-item" >Tambah Penjualan</a></li>
           <li class="breadcrumb-item active">Tambah Penjualan</li>
+          <form method="POST" action="{{ url('penjualan') }}">
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -200,6 +201,8 @@
 
               <!-- General Form Elements -->
               <form>
+              <form method="POST" action="{{ url('penjualan') }}">
+                @csrf
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-0 col-form-label">ID Penjualan</label>
                   <div class="col-sm-12">
@@ -240,12 +243,11 @@
                   <label for="inputText" class="col-sm-0 col-form-label">Pembayaran</label>
                   <div class="col-sm-12">
                     <input type="text" class="form-control">
-                  </div>
                 </div>
                 <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-0 col-form-label">Tanggal Beli</label>
                   <div class="col-sm-12">
-                    <input type="number" class="form-control">
+                    <input type="text" class="form-control">
                   </div>
                 </div>
                 <center>

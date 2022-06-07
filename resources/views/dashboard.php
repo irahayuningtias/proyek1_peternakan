@@ -36,7 +36,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="dashboard" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -102,7 +102,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index">
+        <a class="nav-link " href="dashboard">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -138,7 +138,7 @@
 
       <!--Kelola Penjualan-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-penjualan">
+        <a class="nav-link " href="penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a> 
