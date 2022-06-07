@@ -45,9 +45,9 @@ Route::resource('tabel-admin', AdminsController::class);
 //Route::post('/simpanadmin', [AdminsController::class, 'simpanadmin'])->name('simpanadmin');
 ///
 
-Route::get('/forms-gudang', function () {
+/*Route::get('/forms-gudang', function () {
     return view('form/forms-gudang');
-});
+});*/
 /////
 Route::get('/forms-pakan', function () {
     return view('form/forms-pakan');
@@ -75,7 +75,7 @@ Route::get('/charts', function () {
 
 
 Route::resource('tabel-penjualan', PenjualanController::class);
-Route::resource('tabel-gudang', GudangController::class);
+Route::resource('gudang', GudangController::class);
 Route::resource('tabel-pakan', PakanController::class);
 Route::resource('tabel-ternak', TernakController::class);
 
