@@ -67,7 +67,7 @@ Route::get('/charts', function () {
 
 
 Route::resource('tabel-penjualan', PenjualanController::class);
-Route::resource('tabel-gudang', GudangController::class);
+Route::resource('gudang', GudangController::class);
 Route::resource('tabel-pakan', PakanController::class);
 Route::resource('tabel-ternak', TernakController::class);
 

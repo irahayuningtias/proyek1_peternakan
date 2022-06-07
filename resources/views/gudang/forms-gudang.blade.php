@@ -179,7 +179,7 @@
   </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
-
+  
     <div class="pagetitle">
       <h1>Tambah Gudang</h1>
       <nav>
@@ -199,7 +199,8 @@
               <h5 class="card-title">Form Tambah Gudang</h5>
 
               <!-- General Form Elements -->
-              <form>
+              <form method="POST" action"{{ url('gudang') }}">
+              @csrf
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-0 col-form-label">ID Gudang</label>
                   <div class="col-sm-12">
@@ -243,7 +244,8 @@
                   </div>
                 </div>
                 </center>
-              </form><!-- End General Form Elements -->
+              </form>
+              <!-- End General Form Elements -->
           </div>
          </div>
       </div>
