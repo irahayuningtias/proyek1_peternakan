@@ -36,11 +36,11 @@
 </div>
 
 <div class="row clearfix">
-    <div class="col-md-6">Jenis Hasil</div>
+    <div class="col-md-6">Jumlah</div>
     
     <div class="col-md-6">
-        <input class="form-control" type="text" name="jenis_hasil" value="{{ $model->jenis_hasil }}"> 
-        @foreach($errors->get('jenis_hasil') as $msg)
+        <input class="form-control"  type="text" name="jumlah" value="{{ $datas->jumlah }}">
+        @foreach($errors->get('jumlah') as $msg)
             <p class="text-danger">{{ $msg }}</p>
         @endforeach
     </div>
@@ -52,17 +52,6 @@
     <div class="col-md-6">
         <input class="form-control"  type="text" name="jenis_ternak" value="{{ $datas->jenis_ternak }}">
         @foreach($errors->get('jenis_ternak') as $msg)
-            <p class="text-danger">{{ $msg }}</p>
-        @endforeach
-    </div>
-</div>
-
-<div class="row clearfix">
-    <div class="col-md-6">Jumlah</div>
-    
-    <div class="col-md-6">
-        <input class="form-control"  type="text" name="jumlah" value="{{ $datas->jumlah }}">
-        @foreach($errors->get('jumlah') as $msg)
             <p class="text-danger">{{ $msg }}</p>
         @endforeach
     </div>
