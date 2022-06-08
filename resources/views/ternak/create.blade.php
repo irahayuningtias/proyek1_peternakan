@@ -1,5 +1,4 @@
 
-    <br/>
     <form method="POST" action="{{ url('ternak') }}" enctype="multipart/form-data">
         @csrf 
     <div class="row clearfix">
@@ -82,3 +81,4 @@
 
 <button type="submit" class="btn btn-primary">SIMPAN</button>
     </form>
+
