@@ -42,7 +42,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
 <div class="d-flex align-items-center justify-content-between">
-  <a href="index" class="logo d-flex align-items-center">
+  <a href="dashboard" class="logo d-flex align-items-center">
     <img src="assets/img/logo.png" alt="">
     <span class="d-none d-lg-block">SIVENTA</span>
   </a>
@@ -106,7 +106,7 @@
 <ul class="sidebar-nav" id="sidebar-nav">
 
   <li class="nav-item">
-    <a class="nav-link collapsed" href="index">
+    <a class="nav-link collapsed" href="dashboard">
       <i class="bi bi-grid"></i>
       <span>Dashboard</span>
     </a>
@@ -118,17 +118,17 @@
     </a>
     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="tabel-admin">
+        <a href="admin">
           <i class="bi bi-circle"></i><span>Admin</span>
         </a>
       </li>
       <li>
-        <a href="tabel-pakan">
+        <a href="pakan">
           <i class="bi bi-circle"></i><span>Pakan</span>
         </a>
       </li>
       <li>
-        <a href="tabel-ternak">
+        <a href="ternak">
           <i class="bi bi-circle"></i><span>Ternak</span>
         </a>
       </li>
@@ -142,7 +142,7 @@
 
   <!--Kelola Penjualan-->
   <li class="nav-item">
-    <a class="nav-link " href="tabel-tambahpenjualan">
+    <a class="nav-link " href="penjualan">
       <i class="bi bi-journal-text"></i>
       <span>Kelola Penjualan</span>
     </a>
@@ -179,7 +179,7 @@
 <main id="main" class="main">
 
 <div class="pagetitle">
-  <h1>Daftar Data Admin</h1>
+  <h1>Daftar Data Gudang</h1>
   <nav>
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="tabel-admin">Kelola Gudang</a></li>
