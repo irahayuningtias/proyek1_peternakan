@@ -207,6 +207,7 @@
             <a href ="{{ url('admin/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Admin</button>
         </div>
+        <a href="{{ url('admin/cetak_pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
     </div>
 
     <section class="section">

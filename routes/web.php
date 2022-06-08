@@ -73,7 +73,6 @@ Route::resource('ternak', TernakController::class);
 
 //admin route
 Route::resource('admin', AdminsController::class);
-
 //Route::get('admin/tabel-admin', AdminsController::class);
 
 //Route::post('/simpanadmin', [AdminsController::class, 'simpanadmin'])->name('simpanadmin');

@@ -107,4 +107,11 @@ class AdminsController extends Controller
     {
         //
     }
+    public function cetak_pdf()
+    {
+        $model = admins::all();
+
+        $pdf = PDF::loadview('admin_pdf',['admin.index'=>$model]);
+        return $pdf->stream();
+    }
 }
