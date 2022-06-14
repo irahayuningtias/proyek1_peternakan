@@ -219,27 +219,6 @@
               <h5 class="card-title">Daftar Admin</h5>
 
               <!-- Table with stripped rows -->
-<<<<<<< HEAD
-              <table class="table datatable" >
-                <thead>
-                  <tr>
-                    <th scope="col">ID Admin</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">No. Telepon</th>
-                  </tr>
-
-                  @foreach ($model as $key=>$value)
-                   <tr>
-                   <td>{{$value->id_admin}}</td>
-                     <td>{{$value->nama_admin}}</td>
-                     <td>{{$value->jenis_kelamin}}</td>
-                     <td>{{$value->alamat}}</td>
-                     <td>{{$value->no_hp}}</td>
-                     @endforeach
-                    </tr>
-=======
               <table class="table datatable">
             <thead>
               <tr>
@@ -260,7 +239,6 @@
                 @endforeach
               <tr>
                   
->>>>>>> ab34899f4104686c81f8d41531450489a19780d0
                 </thead>
               </table>
               <!-- End Table with stripped rows -->

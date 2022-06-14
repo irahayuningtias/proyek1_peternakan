@@ -37,7 +37,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="dashboard" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -137,7 +137,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-tambahpenjualan">
+        <a class="nav-link " href="penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -177,7 +177,7 @@
       <h1>Laporan</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index">Home</a></li>
+          <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
           <li class="breadcrumb-item">Laporan</li>
           <li class="breadcrumb-item active">Data</li>
         </ol>
@@ -196,7 +196,6 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Admin</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Jenis Kelamin</th>
@@ -220,7 +219,6 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Pakan</th>
                     <th scope="col">Nama Pakan</th>
                     <th scope="col">Jumlah</th>
@@ -240,7 +238,6 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Ternak</th>
                     <th scope="col">Jenis Ternak</th>
                     <th scope="col">Jumlah</th>
@@ -261,7 +258,6 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Gudang</th>
                     <th scope="col">Jenis Hasil Ternak</th>
                     <th scope="col">Jumlah</th>
@@ -272,14 +268,11 @@
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
-
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   </main><!-- End #main -->
 
  <!-- ======= Footer ======= -->
