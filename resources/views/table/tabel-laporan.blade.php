@@ -175,6 +175,7 @@
 
     <div class="pagetitle">
       <h1>Laporan</h1>
+      <a href="{{ url('admin/cetak_pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index">Home</a></li>
@@ -227,6 +228,7 @@
                     <th scope="col">Tanggal Beli</th>
                     <th scope="col">Tanggal Expired</th>
                   </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -242,11 +244,14 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID Ternak</th>
+                    <th scope="col">ID Pakan</th>
+                    <th scope="col">ID Admin</th>
                     <th scope="col">Jenis Ternak</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Tanggal Masuk</th>
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -269,12 +274,40 @@
                     <th scope="col">Tanggal Masuk</th>
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
 
             </div>
           </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Daftar Penjualan</h5>
+
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID Penjualan</th>
+                    <th scope="col">ID Admin</th>
+                    <th scope="col">ID Ternak</th>
+                    <th scope="col">ID Gudang</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Harga Unit</th>
+                    <th scope="col">Pembayaran</th>
+                    <th scope="col">Tanggal Beli</th>
+                  </tr>
+
+                </thead>
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+
 
         </div>
       </div>
