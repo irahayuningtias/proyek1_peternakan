@@ -46,10 +46,18 @@ Route::get('/contact', function () {
 
 /*Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
+<<<<<<< HEAD
 });*/
 // Route::get('/forms-tambahpenjualan', function () {
 //     return view('form/forms-tambahpenjualan');
 // });
+=======
+});
+>>>>>>> ab34899f4104686c81f8d41531450489a19780d0
+
+/*Route::get('/forms-tambahpenjualan', function () {
+    return view('penjualan/create');
+});*/
 
 Route::get('/faq', function () {
     return view('more/faq');
@@ -60,6 +68,10 @@ Route::get('/tabel-laporan', function () {
 Route::get('/charts', function () {
     return view('charts');
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> ab34899f4104686c81f8d41531450489a19780d0
 Route::resource('penjualan', PenjualanController::class);
 Route::resource('gudang', GudangController::class);
 Route::resource('pakan', PakanController::class);
@@ -71,6 +83,10 @@ Route::resource('admin', AdminsController::class);
 //Route::resource('admin.forms-admin', AdminsController::class);
 
 //admin route
+<<<<<<< HEAD
+=======
+Route::resource('admin', AdminsController::class);
+>>>>>>> ab34899f4104686c81f8d41531450489a19780d0
 //Route::get('admin/tabel-admin', AdminsController::class);
 
 //Route::post('/simpanadmin', [AdminsController::class, 'simpanadmin'])->name('simpanadmin');

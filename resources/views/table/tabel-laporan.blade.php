@@ -101,7 +101,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index">
+        <a class="nav-link collapsed" href="dashboard">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -113,22 +113,22 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-admin">
+            <a href="admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
           <li>
-            <a href="forms-pakan">
+            <a href="pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="forms-ternak">
+            <a href="ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="forms-gudang">
+            <a href="gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>

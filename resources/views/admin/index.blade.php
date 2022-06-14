@@ -37,7 +37,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="dashboard" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -120,7 +120,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="index">
+        <a class="nav-link collapsed" href="dashboard">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -137,17 +137,17 @@
             </a>
           </li>
           <li>
-            <a href="tabel-pakan">
+            <a href="pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="tabel-ternak">
+            <a href="ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="tabel-gudang">
+            <a href="gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -156,7 +156,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-tambahpenjualan">
+        <a class="nav-link " href="penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -207,6 +207,7 @@
             <a href ="{{ url('admin/create') }}"></a>
             <button type="submit" class="btn btn-primary">Tambah Admin</button>
         </div>
+        <a href="{{ url('admin/cetak_pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
     </div>
 
     <section class="section">
@@ -218,6 +219,7 @@
               <h5 class="card-title">Daftar Admin</h5>
 
               <!-- Table with stripped rows -->
+<<<<<<< HEAD
               <table class="table datatable" >
                 <thead>
                   <tr>
@@ -237,6 +239,28 @@
                      <td>{{$value->no_hp}}</td>
                      @endforeach
                     </tr>
+=======
+              <table class="table datatable">
+            <thead>
+              <tr>
+                <th scope="col">ID Admin</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Jenis Kelamin</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">No. Telepon</th>
+              </tr>
+
+              @foreach ($model as $key => $value)
+              <tr>
+                <td>{{$value->id_admin}}</td>
+                <td>{{$value->nama_admin}}</td>
+                <td>{{$value->jenis_kelamin}}</td>
+                <td>{{$value->alamat}}</td>
+                <td>{{$value->no_hp}}</td>
+                @endforeach
+              <tr>
+                  
+>>>>>>> ab34899f4104686c81f8d41531450489a19780d0
                 </thead>
               </table>
               <!-- End Table with stripped rows -->

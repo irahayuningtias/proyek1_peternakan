@@ -8,6 +8,7 @@ use App\Models\Gudang;
 use App\Models\Penjualan;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Http\Requests\PenjualanRequest;
 
 class PenjualanController extends Controller
 {
@@ -20,7 +21,7 @@ class PenjualanController extends Controller
     {
         $penjualan = penjualan::all();
         $penjualan = penjualan::OrderBy('id_penjualan', 'asc')->paginate(10);
-        return view('table.tabel-penjualan', ['penjualan' => $penjualan]);
+        return view('penjualan.index', compact('penjualan'));
     }
 
     /**
@@ -30,29 +31,28 @@ class PenjualanController extends Controller
      */
     public function create()
     {
-        return view('form.forms-tambahpenjualan');
+        $model = new Penjualan;
+        return view('penjualan.create', compact('model'));
     }
 
-    public function store(Request $request)
+    public function store(PenjualanRequest $request)
     {
-        $request->validate([
-            'id_penjualan' => 'required',
-            'id_admin' => 'required',
-            'id_ternak' => 'required',
-            'id_gudang' => 'required',
-            'jumlah' => 'required',
-            'harga_unit' => 'required',
-            'pembayaran' => 'required',
-            'tanggal_beli' => 'required',
-        ]);
-
-        Penjualan::create($request->all());
-
-        return redirect()->route('table.tabel-penjualan')
-            ->with('success', 'Penjualan Berhasil Ditambahkan');
+        $model = new Penjualan;
+        $model->id_penjualan = $request->id_penjualan;
+        $model->id_admin = $request->id_admin;
+        $model->id_ternak = $request->id_ternak;
+        $model->id_gudang = $request->id_gudang;
+        $model->jumlah = $request->jumlah;
+        $model->harga_unit = $request->harga_unit;
+        $model->pembayaran = $request->pembayaran;
+        $model->tanggal_beli = $request->tanggal_beli;
+        $model->save();
+        
+        return redirect()->route('penjualan')
+        ->with('success', 'Penjualan Berhasil Ditambahkan');
     }
 
-    public function show($id_penjualan)
+    public function show(penjualan $penjualan)
     {
         //
     }
@@ -63,7 +63,7 @@ class PenjualanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id_penjualan)
+    public function edit(penjualan $penjualan)
     {
         //
     }
@@ -75,7 +75,7 @@ class PenjualanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, penjualan $penjualan)
     {
         //
     }
@@ -86,7 +86,7 @@ class PenjualanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(penjualan $penjualan)
     {
         //
     }
