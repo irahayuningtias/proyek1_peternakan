@@ -47,9 +47,9 @@ Route::get('/contact', function () {
 /*Route::get('/forms-ternak', function () {
     return view('form/forms-ternak');
 });*/
-Route::get('/forms-tambahpenjualan', function () {
-    return view('form/forms-tambahpenjualan');
-});
+// Route::get('/forms-tambahpenjualan', function () {
+//     return view('form/forms-tambahpenjualan');
+// });
 
 Route::get('/faq', function () {
     return view('more/faq');
@@ -60,18 +60,17 @@ Route::get('/tabel-laporan', function () {
 Route::get('/charts', function () {
     return view('charts');
 });
-Route::resource('tabel-penjualan', PenjualanController::class);
+Route::resource('penjualan', PenjualanController::class);
 Route::resource('gudang', GudangController::class);
 Route::resource('pakan', PakanController::class);
 Route::resource('ternak', TernakController::class);
+Route::resource('admin', AdminsController::class);
 
 //ini route untuk CRUD tabel Admin
 //Route::resource('tabel-admin', AdminsController::class);
 //Route::resource('admin.forms-admin', AdminsController::class);
 
 //admin route
-Route::resource('admin', AdminsController::class);
-
 //Route::get('admin/tabel-admin', AdminsController::class);
 
 //Route::post('/simpanadmin', [AdminsController::class, 'simpanadmin'])->name('simpanadmin');

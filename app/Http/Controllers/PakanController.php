@@ -6,6 +6,7 @@ use App\Models\Admins;
 use App\Models\Pakan;
 use Illuminate\Http\Request;
 use App\Http\Requests\pakanRequest;
+use PDF;
 
 class PakanController extends Controller
 {
@@ -121,4 +122,13 @@ class PakanController extends Controller
     {
         //
     }
+
+    public function cetak_pdf(){
+        $pakan =  pakan::all();
+        $id_pakan =  DB::table('admin')
+        ->join('admin');
+
+        //$pdf = PDF::loadview('admin.pdf', compact('admin'))
+    }
+
 }

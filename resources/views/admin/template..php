@@ -28,6 +28,13 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -36,7 +43,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -57,9 +64,8 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
-          </a>
-        <!-- End Profile Iamge Icon -->
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
@@ -91,6 +97,7 @@
             </li>
           </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
+
       </ul>
     </nav><!-- End Icons Navigation -->
 
@@ -102,7 +109,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index">
+        <a class="nav-link collapsed" href="index">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -113,37 +120,37 @@
           <i class="bi bi-journal-text"></i><span>Kelola Gudang</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-        <li>
+          <li>
             <a href="admin">
               <i class="bi bi-circle"></i><span>Admin</span>
             </a>
           </li>
           <li>
-            <a href="pakan">
+            <a href="tabel-pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="ternak">
+            <a href="tabel-ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="gudang">
+            <a href="tabe-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
         </ul>
       </li><!-- End Forms Nav -->
 
-      <!--Kelola Penjualan-->
+      <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-penjualan">
+        <a class="nav-link " href="tabel-tambahpenjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
-        </a> 
+        </a>
       </li>
-      <!-- End Kelola Penjualan -->
+      <!-- End Kelola Gudang -->
 
       <!--Laporan-->
       <li class="nav-item">
@@ -152,7 +159,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tabel-laporan">
+            <a href="tabel-penjualan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>
@@ -174,33 +181,96 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Tambah Admin</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+        <li class="breadcrumb-item"><a href="tabel-admin">Kelola Gudang</a></li>
+          <li class="breadcrumb-item active">Tambah Admin</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section dashboard">
-      <div class="col-xxl-4 col-md-6">
-          <h5>Anda Berhasil Login!</h5>
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-6">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Form Tambah Admin</h5>
+
+              <!-- General Form Elements -->
+            
+              <div class="row clearfix">
+    <div class="col-md-6">ID Admin</div>
+    
+    <div class="col-md-6">
+        <input class="form-control" type="text" name="id_admin" value="{{ $model->id_admin }}"> 
+        @foreach($errors->get('id_admin') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">Nama Admin</div>
+    
+    <div class="col-md-6">
+        <input class="form-control" type="text" name="nama_admin" value="{{ $model->nama_admin }}"> 
+        @foreach($errors->get('nama_admin') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">Tanggal Lahir</div>
+    
+    <div class="col-md-6">
+        <input class="form-control"  type="text" name="jenis_kelamin" value="{{ $model->jenis_kelamin }}">
+        @foreach($errors->get('jenis_kelamin') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">Alamat</div>
+    
+    <div class="col-md-6">
+        <input class="form-control"  type="text" name="alamat" value="{{ $model->alamat }}">
+        @foreach($errors->get('alamat') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">NIP</div>
+    
+    <div class="col-md-6">
+        <input class="form-control"  type="text" name="no_hp"  value="{{ $model->no_hp }}">
+        @foreach($errors->get('no_hp') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+
+<button type="submit" class="btn btn-primary">SIMPAN</button>
+              </form><!-- End General Form Elements -->
+            </div>
+          </div>
         </div>
       </div>
-
-        </div><!-- End Right side columns -->
-
+      </div>
       </div>
     </section>
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>SIVENTA - Sistem Informasi Inventory Peternakan Ayam</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>SIVENTA</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

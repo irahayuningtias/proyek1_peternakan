@@ -204,7 +204,7 @@
 
     <div class="row mb-3">
         <div class="col-sm-6">
-            <a href ="{{ url('admin/create') }}">
+            <a href ="{{ url('admin/create') }}"></a>
             <button type="submit" class="btn btn-primary">Tambah Admin</button>
         </div>
     </div>
@@ -226,20 +226,17 @@
                     <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Alamat</th>
                     <th scope="col">No. Telepon</th>
-                    <!--<th scope="col">Password</th>-->
-                    <!--<th scope="col">Foto</th>-->
                   </tr>
 
                   @foreach ($model as $key=>$value)
                    <tr>
-                     <td>{{$value->id_admin}}<td>
+                   <td>{{$value->id_admin}}</td>
                      <td>{{$value->nama_admin}}</td>
                      <td>{{$value->jenis_kelamin}}</td>
                      <td>{{$value->alamat}}</td>
                      <td>{{$value->no_hp}}</td>
                      @endforeach
                     </tr>
-                  
                 </thead>
               </table>
               <!-- End Table with stripped rows -->

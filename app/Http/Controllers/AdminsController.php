@@ -107,4 +107,16 @@ class AdminsController extends Controller
     {
         //
     }
+
+    public function cetak_pdf(){
+
+        $id_admin = admins::all();
+        $data_admin = DB::table('data_admin')
+        ->select('data_admin.*', 'id_admin.*')
+        ->get();
+        
+        $pdf = PDF::loadview('admin.pdf', compact('admin', 'data_admin'));
+        return $pdf->stream();
+    }
+
 }
