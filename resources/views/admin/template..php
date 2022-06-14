@@ -29,6 +29,12 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.2.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -37,13 +43,13 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-    
+
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -53,55 +59,57 @@
           </a>
         </li><!-- End Search Icon-->
 
-     <!--Profil-->
-     <li class="nav-item dropdown pe-3">
-        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-2">K. nderAson</span>
-        </a>
-        <!-- End Profile Iamge Icon -->
+        <!--Profil-->
+        <li class="nav-item dropdown pe-3">
 
-        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li class="dropdown-header">
-            <h6>Kevin Anderson</h6>
-            <span>Web Designer</span>
-        </li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          </a><!-- End Profile Iamge Icon -->
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-person"></i>
-            <span>My Profile</span>
-            </a>
-        </li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Kevin Anderson</h6>
+              <span>Web Designer</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-        <li>
-            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-gear"></i>
-            <span>Account Settings</span>
-            </a>
-        </li>
-        <li>
-            <hr class="dropdown-divider">
-        </li>
-        </ul><!-- End Profile Dropdown Items -->
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+          </ul><!-- End Profile Dropdown Items -->
         </li><!-- End Profile Nav -->
-        </ul>
-        </nav><!-- End Icons Navigation -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
 
+  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="dashboard">
+        <a class="nav-link collapsed" href="index">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
@@ -118,17 +126,17 @@
             </a>
           </li>
           <li>
-            <a href="pakan">
+            <a href="tabel-pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="ternak">
+            <a href="tabel-ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="gudang">
+            <a href="tabe-gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -151,7 +159,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-          <a href="tabel-laporan">
+            <a href="tabel-penjualan">
               <i class="bi bi-circle"></i><span>Data</span>
             </a>
           </li>
@@ -169,121 +177,98 @@
       </li>
       <!--End Log Out -->
   </aside><!-- End Sidebar-->
-    </ul>
 
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Laporan</h1>
+      <h1>Tambah Admin</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index">Home</a></li>
-          <li class="breadcrumb-item">Laporan</li>
-          <li class="breadcrumb-item active">Data</li>
+        <li class="breadcrumb-item"><a href="tabel-admin">Kelola Gudang</a></li>
+          <li class="breadcrumb-item active">Tambah Admin</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Data Admin</h5>
+              <h5 class="card-title">Form Tambah Admin</h5>
 
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ID Admin</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">No. Telepon</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">Foto</th>
-                  </tr>
-                </thead>
-              </table>
-              <!-- End Table with stripped rows -->
-        </div>
-        </div>
+              <!-- General Form Elements -->
+            
+              <div class="row clearfix">
+    <div class="col-md-6">ID Admin</div>
+    
+    <div class="col-md-6">
+        <input class="form-control" type="text" name="id_admin" value="{{ $model->id_admin }}"> 
+        @foreach($errors->get('id_admin') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">Nama Admin</div>
+    
+    <div class="col-md-6">
+        <input class="form-control" type="text" name="nama_admin" value="{{ $model->nama_admin }}"> 
+        @foreach($errors->get('nama_admin') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">Tanggal Lahir</div>
+    
+    <div class="col-md-6">
+        <input class="form-control"  type="text" name="jenis_kelamin" value="{{ $model->jenis_kelamin }}">
+        @foreach($errors->get('jenis_kelamin') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">Alamat</div>
+    
+    <div class="col-md-6">
+        <input class="form-control"  type="text" name="alamat" value="{{ $model->alamat }}">
+        @foreach($errors->get('alamat') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
+
+<div class="row clearfix">
+    <div class="col-md-6">NIP</div>
+    
+    <div class="col-md-6">
+        <input class="form-control"  type="text" name="no_hp"  value="{{ $model->no_hp }}">
+        @foreach($errors->get('no_hp') as $msg)
+            <p class="text-danger">{{ $msg }}</p>
+        @endforeach
+    </div>
+</div>
 
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Data Pakan</h5>
-
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ID Pakan</th>
-                    <th scope="col">Nama Pakan</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Tanggal Beli</th>
-                    <th scope="col">Tanggal Expired</th>
-                  </tr>
-                </thead>
-              </table>
-              <!-- End Table with stripped rows -->
-              </div>
-        </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Data Ternak</h5>
-
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ID Ternak</th>
-                    <th scope="col">Jenis Ternak</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Tanggal Masuk</th>
-                    <th scope="col">Tanggal Keluar</th>
-                  </tr>
-                </thead>
-              </table>
-              <!-- End Table with stripped rows -->
-              </div>
-        </div>
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Data Gudang</h5>
-
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ID Gudang</th>
-                    <th scope="col">Jenis Hasil Ternak</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Harga Unit</th>
-                    <th scope="col">Tanggal Masuk</th>
-                    <th scope="col">Tanggal Keluar</th>
-                  </tr>
-                </thead>
-              </table>
-              <!-- End Table with stripped rows -->
-
+<button type="submit" class="btn btn-primary">SIMPAN</button>
+              </form><!-- End General Form Elements -->
             </div>
           </div>
-
         </div>
       </div>
+      </div>
+      </div>
     </section>
-
   </main><!-- End #main -->
 
- <!-- ======= Footer ======= -->
- <footer id="footer" class="footer">
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>SIVENTA</span></strong>. All Rights Reserved
     </div>
