@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\AdminsController;
 use App\Models\Admins;
 use App\Models\Pakan;
 use Illuminate\Http\Request;
@@ -94,10 +95,10 @@ class PakanController extends Controller
      * @param  \App\Models\Admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function edit($id_pakan)
+    public function edit($idpakan)
     {
-        $Pakan = Pakan::find($id_pakan);
-        return view('pakan', compact('Pakan'));
+        $pakan = Pakan::find($idpakan);
+        return view('pakan.edit', compact('pakan'));
     }
 
     /**
@@ -107,9 +108,21 @@ class PakanController extends Controller
      * @param  \App\Models\Admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Admins $admins)
+    public function update(PakanRequest $request, $idpakan)
     {
-        //
+         //fungsi eloquent untuk mengupdate data inputan kita
+         $pakan = Pakan::find($idpakan);
+         $pakan->id_pakan = $request->id_pakan;
+         $pakan->id_admin = $request->id_admin;
+         $pakan->nama_pakan = $request->nama_pakan;
+         $pakan->jumlah = $request->jumlah;
+         $pakan->tanggal_beli = $request->tanggal_beli;
+         $pakan->tanggal_expired = $request->tanggal_expired;
+         $pakan->save();
+
+     //jika data berhasil diupdate, akan kembali ke halaman utama
+     return redirect()->route('pakan.index')
+         ->with('success', 'pakan Berhasil Diupdate');
     }
 
     /**
@@ -118,9 +131,11 @@ class PakanController extends Controller
      * @param  \App\Models\Admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Admins $admins)
+    public function destroy(Pakan $pakan)
     {
-        //
+        Pakan::destroy($pakan->id_pakan);
+        return redirect()->route('pakan')
+            -> with('success', 'Mahasiswa Berhasil Dihapus');
     }
 
     public function cetak_pdf(){

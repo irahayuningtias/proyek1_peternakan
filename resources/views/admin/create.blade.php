@@ -30,7 +30,7 @@
 </div>
 
 <div class="row clearfix">
-    <div class="col-md-6">Tanggal Lahir</div>
+    <div class="col-md-6">Jenis Kelamin</div>
     
     <div class="col-md-6">
         <input class="form-control"  type="text" name="jenis_kelamin" value="{{ $model->jenis_kelamin }}">

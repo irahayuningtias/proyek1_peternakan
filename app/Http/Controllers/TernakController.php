@@ -71,9 +71,10 @@ class TernakController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function edit(admins $admins)
+    public function edit($idternak)
     {
-        //
+        $ternak = Ternak::find($idternak);
+        return view('ternak.edit', compact('ternak'));
     }
 
     /**
@@ -83,9 +84,19 @@ class TernakController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, admins $admins)
+    public function update(TernakRequest $request,  $idternak)
     {
-        //
+        $ternak = Ternak::find($idternak); 
+        $ternak->id_ternak = $request->id_ternak;
+        $ternak->id_pakan = $request->id_pakan;
+        $ternak->id_admin = $request->id_admin;
+        $ternak->jumlah = $request->jumlah;
+        $ternak->jenis_ternak = $request->jenis_ternak;
+        $ternak->tanggal_masuk = $request->tanggal_masuk;
+        $ternak->tanggal_keluar = $request->tanggal_keluar;
+        $ternak->save();
+        
+        return redirect()->route('ternak.index');
     }
 
     /**
@@ -94,8 +105,9 @@ class TernakController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function destroy(admins $admins)
+    public function destroy(Ternak $ternak)
     {
-        //
+        Ternak::destroy($ternak->id_ternak);
+        return redirect()->route('ternak.index');
     }
 }

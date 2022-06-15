@@ -195,8 +195,10 @@
 
     <div class="row mb-3">
         <div class="col-sm-6">
-        <a href ="{{ url('pakan/create') }}"></a>
-            <button type="submit" class="btn btn-primary">Tambah Pakan</button>
+        <a href ="{{ url('pakan/create') }}">
+            <button type="submit" class="btn btn-primary">Tambah Pakan</button></a>
+            <a href="{{ url('exportlaporan') }}">
+              <button type="submit" class="btn btn-primary">CETAK PDF</button></a>
         </div>
     </div>
 
@@ -209,33 +211,47 @@
               <h5 class="card-title">Daftar Pakan</h5>
 
               <!-- Table with stripped rows -->
-             
+            
               <table class="table datatable">
+              <thead>
                   <tr>
-                    <th >ID Pakan</th>
-                    <th></th>
-                    <th >ID Admin</th>
-                    <th></th>
-                    <th >Nama Pakan</th>
-                    <th></th>
-                    <th >Jumlah</th>
-                    <th >Tanggal Beli</th>
-                    <th >Tanggal Expired</th>
+                    <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th> 
+                    <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th> 
+                    <!-- <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>  -->
+                    <th scope="col">ID Pakan</th> 
+                    <!-- <th scope="col">&emsp;&emsp;&emsp;</th>     -->
+                    <th scope="col">ID Admin</th> 
+                    <!-- <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;</th>                    -->
+                    <th scope="col">Nama Pakan</th>                  
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Tanggal Beli</th>
+                    <th scope="col">Tanggal Expired</th>                         
                   </tr>
                 
                   <tr>
-                  @foreach ($pakans as $key=>$value)
-                    <td>{{$value->id_pakan}}<th>
-                    <td>{{$value->id_admin}}<td>
-                    <td>{{$value->nama_pakan}}</td>
-                    <td></td>
-                    <td>{{$value->jumlah}}</td>
-                    <td>{{$value->tanggal_beli}}</td>
-                    <td>{{$value->tanggal_expired}}</td>
-                    @endforeach  
+                  @foreach ($pakans as $key => $value) 
+                    <td scope="col">{{$value->id_pakan}}</td>
+                    <td scope="col">{{$value->id_admin}}</td>
+                    <td scope="col">{{$value->nama_pakan}}</td>
+                    <td scope="col">{{$value->jumlah}}</td>
+                    <td scope="col">{{$value->tanggal_beli}}</td>
+                    <td scope="col">{{$value->tanggal_expired}}</td>   
+                  <td>
+                      <a href ="{{ url('pakan/'.$value->id_pakan.'/edit') }}">
+                      <button type="submit" class="btn btn-primary">EDIT</button></a>
+                    </td>
+                    <td>
+                      <form action="{{ url('pakan/'.$value->id_pakan) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                      </form>
+                    </td> 
+                  
                   </tr>
-                                  
-                 
+                  @endforeach         
+                </thead>
               </table>
           </div>
               <!-- End Table with stripped rows -->

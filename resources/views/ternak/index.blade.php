@@ -187,7 +187,9 @@
         <div class="col-sm-6">
             <a href ="{{ url('ternak/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Ternak</button>
-        </div>
+            <a href="{{ url('exportlaporan') }}">
+              <button type="submit" class="btn btn-primary">CETAK PDF</button></a>
+          </div>
     </div>
 
     <section class="section">
@@ -220,6 +222,18 @@
                      <td>{{$item->jenis_ternak}}</td>
                      <td>{{$item->tanggal_masuk}}</td>
                      <td>{{$item->tanggal_keluar}}</td>
+                     <td>
+                      <a href ="{{ url('ternak/'.$item->id_ternak.'/edit') }}">
+                      <button type="submit" class="btn btn-primary">EDIT</button></a>
+                    </td>
+                    <td>
+                      <form action="{{ url('ternak/'.$item->id_ternak) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                      </form>
+                    </td> 
                      @endforeach
                     </tr>
 

@@ -23,12 +23,10 @@ class gudang extends Model
         'tanggal_keluar',
     ];
     
-    public function admins()
+    public function gudang()
     {
-    return $this->belongsTo(Admins::class);
+        return $this->hasMany(Admins::class);
+        return $this->hasMany(Ternak::class);
     } 
-    public function ternak()
-    {
-    return $this->hasMany(Ternak::class);
-    }
+    
 }
