@@ -37,7 +37,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index" class="logo d-flex align-items-center">
+      <a href="dashboard" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">SIVENTA</span>
       </a>
@@ -137,7 +137,7 @@
 
       <!--Kelola Gudang-->
       <li class="nav-item">
-        <a class="nav-link " href="tabel-tambahpenjualan">
+        <a class="nav-link " href="penjualan">
           <i class="bi bi-journal-text"></i>
           <span>Kelola Penjualan</span>
         </a>
@@ -175,9 +175,10 @@
 
     <div class="pagetitle">
       <h1>Laporan</h1>
+      <a href="{{ url('admin/cetak_pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index">Home</a></li>
+          <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
           <li class="breadcrumb-item">Laporan</li>
           <li class="breadcrumb-item active">Data</li>
         </ol>
@@ -196,7 +197,6 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Admin</th>
                     <th scope="col">Nama</th>
                     <th scope="col">Jenis Kelamin</th>
@@ -220,13 +220,13 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Pakan</th>
                     <th scope="col">Nama Pakan</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Tanggal Beli</th>
                     <th scope="col">Tanggal Expired</th>
                   </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -240,13 +240,15 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Ternak</th>
+                    <th scope="col">ID Pakan</th>
+                    <th scope="col">ID Admin</th>
                     <th scope="col">Jenis Ternak</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Tanggal Masuk</th>
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -261,7 +263,6 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Gudang</th>
                     <th scope="col">Jenis Hasil Ternak</th>
                     <th scope="col">Jumlah</th>
@@ -269,6 +270,32 @@
                     <th scope="col">Tanggal Masuk</th>
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
+
+                </thead>
+              </table>
+              <!-- End Table with stripped rows -->
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Daftar Penjualan</h5>
+
+              <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ID Penjualan</th>
+                    <th scope="col">ID Admin</th>
+                    <th scope="col">ID Ternak</th>
+                    <th scope="col">ID Gudang</th>
+                    <th scope="col">Jumlah</th>
+                    <th scope="col">Harga Unit</th>
+                    <th scope="col">Pembayaran</th>
+                    <th scope="col">Tanggal Beli</th>
+                  </tr>
+
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -276,10 +303,10 @@
             </div>
           </div>
 
+
         </div>
       </div>
     </section>
-
   </main><!-- End #main -->
 
  <!-- ======= Footer ======= -->
