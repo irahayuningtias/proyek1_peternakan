@@ -118,17 +118,17 @@
             </a>
           </li>
           <li>
-            <a href="tabel-pakan">
+            <a href="pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="tabel-ternak">
+            <a href="ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="tabel-gudang">
+            <a href="gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -187,6 +187,7 @@
         <div class="col-sm-6">
             <a href ="{{ url('penjualan/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Penjualan</button>
+            <a href="{{ url('cetak-penjualan') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
         </div>
     </div>
 
