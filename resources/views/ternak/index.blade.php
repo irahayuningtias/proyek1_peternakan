@@ -187,8 +187,7 @@
         <div class="col-sm-6">
             <a href ="{{ url('ternak/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Ternak</button>
-            <a href="{{ url('exportlaporan') }}">
-              <button type="submit" class="btn btn-primary">CETAK PDF</button></a>
+            <a href="{{ url('cetak-ternak') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
           </div>
     </div>
 
@@ -222,7 +221,6 @@
                      <td>{{$item->jenis_ternak}}</td>
                      <td>{{$item->tanggal_masuk}}</td>
                      <td>{{$item->tanggal_keluar}}</td>
-                     <td>
                       <a href ="{{ url('ternak/'.$item->id_ternak.'/edit') }}">
                       <button type="submit" class="btn btn-primary">EDIT</button></a>
                     </td>

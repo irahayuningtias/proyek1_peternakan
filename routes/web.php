@@ -92,3 +92,4 @@ Route::resource('admin', AdminsController::class);
 //route untuk pdf
 Route::get('cetak-admin',[AdminsController::class, 'cetakAdmin']);
 Route::get('cetak-pakan',[PakanController::class, 'cetakPakan']);
+Route::get('cetak-ternak',[TernakController::class, 'cetakTernak']);

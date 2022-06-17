@@ -18,6 +18,12 @@ class TernakController extends Controller
             'ternak'
         ));
     }
+
+    public function cetakTernak(){
+        $ternakpdf = Ternak::all();
+        return view('ternak.cetak-ternak', compact('ternakpdf'
+        ));
+    }
     /**
      * Show the form for creating a new resource.
      *
