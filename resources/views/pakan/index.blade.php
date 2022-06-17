@@ -197,8 +197,7 @@
         <div class="col-sm-6">
         <a href ="{{ url('pakan/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Pakan</button></a>
-            <a href="{{ url('exportlaporan') }}">
-              <button type="submit" class="btn btn-primary">CETAK PDF</button></a>
+            <a href="{{ url('cetak-pakan') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
         </div>
     </div>
 

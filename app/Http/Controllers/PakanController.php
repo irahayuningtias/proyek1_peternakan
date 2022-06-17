@@ -23,6 +23,12 @@ class PakanController extends Controller
         return view('pakan.index', compact('pakans'));
     }
 
+    public function cetakPakan()
+    {
+        $pakanpdf = pakan::all();
+        return view('pakan.cetak-pakan', compact('pakanpdf'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

@@ -13,26 +13,26 @@
             border: 1px solid #543535;
         }
     </style>
-    <title>CETAK DATA ADMIN</title>
+    <title>CETAK DATA PAKAN</title>
     </head>
     <body>
         <div class="form-group">
-            <p align="center"><b>Laporan Data Admin</b></p>
+            <p align="center"><b>Laporan Data Pakan</b></p>
             <table class="static" align="center" rules="all" border="1px" style="width: 95%;">
             <tr>
-                <<th scope="col">No.</th>
-                <th scope="col">Nama</th>
-                <th scope="col">Jenis Kelamin</th>
-                <th scope="col">Alamat</th>
-                <th scope="col">Nomor Telepon</th>
+                <th scope="col">No.</th>
+                <th scope="col">Nama Pakan</th>                  
+                <th scope="col">Jumlah</th>
+                <th scope="col">Tanggal Beli</th>
+                <th scope="col">Tanggal Expired</th>               
             </tr>
-            @foreach ($adminpdf as $key => $item)
+            @foreach ($pakanpdf as $key => $value)
             <tr>
                 <td>{{ $loop->iteration }} </td>
-                <td>{{$item->nama_admin}}</td>
-                <td>{{$item->jenis_kelamin}}</td>
-                <td>{{$item->alamat}}</td>
-                <td>{{$item->no_hp}}</td>
+                <td>{{$value->nama_pakan}}</td>
+                <td>{{$value->jumlah}}</td>
+                <td>{{$value->tanggal_beli}}</td>
+                <td>{{$value->tanggal_expired}}</td>   
     </tr>
             @endforeach
     </table>

@@ -88,4 +88,7 @@ Route::resource('admin', AdminsController::class);
 /*start of controller*/
 
 //Route::get('/a', 'index@list');
+
+//route untuk pdf
 Route::get('cetak-admin',[AdminsController::class, 'cetakAdmin']);
+Route::get('cetak-pakan',[PakanController::class, 'cetakPakan']);
