@@ -202,12 +202,11 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <div class="row mb-3">
-        <div class="col-sm-6">
+        <div class="row mb-3">
+        <div class="col-sm-6">    
             <a href ="{{ url('admin/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Admin</button></a>
-            <a href="{{ url('exportlaporan') }}">
-              <button type="submit" class="btn btn-primary">CETAK PDF</button></a>
+            <a href="{{ url('cetak-admin') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
         </div>  
     </div>
 
@@ -258,7 +257,7 @@
               <!-- End Table with stripped rows -->
             </div>
           </div>
-
+   
         </div>
       </div>
     </section>

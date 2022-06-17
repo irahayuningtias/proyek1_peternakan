@@ -26,6 +26,13 @@ class AdminsController extends Controller
         return view('admin.index', compact('model'));
     }
 
+    public function cetakAdmin()
+    {
+        $adminpdf = admins::all();
+        //return $data_admins;
+        return view('admin.cetak-admin', compact('adminpdf'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

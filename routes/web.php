@@ -81,10 +81,11 @@ Route::resource('admin', AdminsController::class);
 //Route::post('/simpanadmin', [AdminsController::class, 'simpanadmin'])->name('simpanadmin');
 ///
 
-Route::get('/exportlaporan', 'App\Http\Controllers\AdminsController@pdf')->name('admin.cetak_pdf');
+//Route::get('/exportlaporan', 'App\Http\Controllers\AdminsController@pdf')->name('admin.cetak_pdf');
 //Route::get('mahasiswas/cetak_pdf/{Nim}', [App\Http\Controllers\MahasiswaController::class, 'cetak_pdf'])->name('mahasiswas.cetak_pdf');
 /*end of web routes*/
 
 /*start of controller*/
 
 //Route::get('/a', 'index@list');
+Route::get('cetak-admin',[AdminsController::class, 'cetakAdmin']);
