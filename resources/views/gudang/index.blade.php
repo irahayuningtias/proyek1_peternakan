@@ -191,8 +191,7 @@
 <div class="row mb-3">
         <div class="col-sm-6">    
       <a class="btn btn-primary" button type="submit" href="{{url('gudang/create') }}">Tambah Gudang</a>
-       <a href="{{ url('exportlaporan') }}">
-              <button type="submit" class="btn btn-primary">CETAK PDF</button></a>
+      <a href="{{ url('cetak-gudang') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
     </div>
 </div>
 

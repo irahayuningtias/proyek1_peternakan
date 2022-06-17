@@ -221,6 +221,7 @@
                      <td>{{$item->jenis_ternak}}</td>
                      <td>{{$item->tanggal_masuk}}</td>
                      <td>{{$item->tanggal_keluar}}</td>
+                     <td>
                       <a href ="{{ url('ternak/'.$item->id_ternak.'/edit') }}">
                       <button type="submit" class="btn btn-primary">EDIT</button></a>
                     </td>

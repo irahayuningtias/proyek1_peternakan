@@ -24,6 +24,12 @@ class GudangController extends Controller
         return view('gudang.index', compact('gudang'));
     }
 
+    public function cetakGudang()
+    {
+        $gudangpdf = gudang::all();
+        return view('gudang.cetak-gudang', compact('gudangpdf'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
