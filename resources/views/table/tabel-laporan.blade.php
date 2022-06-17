@@ -175,7 +175,7 @@
 
     <div class="pagetitle">
       <h1>Laporan</h1>
-      <a href="{{ url('admin/cetak_pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
+      <a href="{{ url('cetak-laporan') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="dashboard">Home</a></li>

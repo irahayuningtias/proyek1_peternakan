@@ -95,3 +95,4 @@ Route::get('cetak-pakan',[PakanController::class, 'cetakPakan']);
 Route::get('cetak-ternak',[TernakController::class, 'cetakTernak']);
 Route::get('cetak-gudang',[GudangController::class, 'cetakGudang']);
 Route::get('cetak-penjualan',[PenjualanController::class, 'cetakPenjualan']);
+Route::resource('cetak-laporan', LaporanController::class);
