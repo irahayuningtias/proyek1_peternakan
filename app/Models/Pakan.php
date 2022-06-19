@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Pakan extends Model
 {
     use HasFactory;
-    protected $table='pakan';
+    protected $table= 'pakan';
     protected $primaryKey = 'id_pakan';
 
 protected $fillable = [
@@ -20,10 +20,9 @@ protected $fillable = [
         'tanggal_expired'
 ];
     
-public function admins()
+public function pakan()
 {
-    return $this->belongsTo(Admins::class);
+    return $this->hasMany(Admins::class);
 }
-
 
 }

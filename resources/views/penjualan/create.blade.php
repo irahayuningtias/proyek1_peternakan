@@ -1,4 +1,3 @@
-
 <form method="POST" action="{{ url('penjualan') }}" enctype="multipart/form-data">
 @csrf
 <div class="row clearfix">

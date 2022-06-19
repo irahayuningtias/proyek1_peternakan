@@ -24,6 +24,12 @@ class GudangController extends Controller
         return view('gudang.index', compact('gudang'));
     }
 
+    public function cetakGudang()
+    {
+        $gudangpdf = gudang::all();
+        return view('gudang.cetak-gudang', compact('gudangpdf'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -79,10 +85,12 @@ class GudangController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function edit(admins $admins)
+    public function edit( $idgudang)
     {
-        //
+        $idgudang = Gudang::find($idgudang);
+        return view('gudang.edit', compact('gudang'));
     }
+    
 
     /**
      * Update the specified resource in storage.
@@ -91,9 +99,23 @@ class GudangController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, admins $admins)
+    public function update(GudangRequest $request, $idgudang)
     {
-        //
+        //fungsi eloquent untuk mengupdate data inputan kita
+        $gudang = Gudang::find($idgudang);
+        $gudang ->id_gudang = $request->id_gudang;
+        $gudang ->id_ternak = $request->id_ternak;
+        $gudang ->id_admin = $request->id_admin;
+        $gudang ->jenis_hasil = $request->jenis_hasil;
+        $gudang ->jumlah = $request->jumlah;
+        $gudang ->harga_unit = $request->harga_unit;
+        $gudang ->tanggal_masuk = $request->tanggal_masuk;
+        $gudang ->tanggal_keluar = $request->tanggal_keluar;
+        $gudang -> save();
+
+    //jika data berhasil diupdate, akan kembali ke halaman utama
+    return redirect()->route('gudang.index')
+        ->with('success', 'gudang Berhasil Diupdate');
     }
 
     /**
@@ -102,8 +124,13 @@ class GudangController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function destroy(admins $admins)
+    public function destroy(Gudang $gudang)
     {
-        //
+        Gudang::destroy($gudang->id_gudang);
+        return redirect()->route('gudang.index');
+    }
+
+    public function cetak_pdf(){
+
     }
 }

@@ -202,12 +202,12 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <div class="row mb-3">
-        <div class="col-sm-6">
+        <div class="row mb-3">
+        <div class="col-sm-6">    
             <a href ="{{ url('admin/create') }}">
-            <button type="submit" class="btn btn-primary">Tambah Admin</button>
-        </div>
-        <a href="{{ url('admin/cetak_pdf') }}" class="btn btn-primary" target="_blank">CETAK PDF</a>
+            <button type="submit" class="btn btn-primary">Tambah Admin</button></a>
+            <a href="{{ url('cetak-admin') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
+        </div>  
     </div>
 
     <section class="section">
@@ -219,34 +219,45 @@
               <h5 class="card-title">Daftar Admin</h5>
 
               <!-- Table with stripped rows -->
-              <table class="table datatable" >
-                <thead>
-                  <tr>
-                    <th scope="col">ID Admin</th>
-                    <th scope="col">Nama</th>
-                    <th scope="col">Jenis Kelamin</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">No. Telepon</th>
-                    <!--<th scope="col">Password</th>-->
-                    <!--<th scope="col">Foto</th>-->
-                  </tr>
+              <table class="table datatable">
+            <thead>
+              <tr>
+                <th scope="col">ID Admin</th>
+                <th scope="col">Nama</th>
+                <th scope="col">Jenis Kelamin</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">Nomor Telepon</th>
 
-                  @foreach ($model as $key=>$value)
-                   <tr>
-                     <td>{{$value->id_admin}}<td>
-                     <td>{{$value->nama_admin}}</td>
-                     <td>{{$value->jenis_kelamin}}</td>
-                     <td>{{$value->alamat}}</td>
-                     <td>{{$value->no_hp}}</td>
-                     @endforeach
-                    </tr>
-                  
+              </tr>
+
+              @foreach ($model as $key => $value)
+              <tr>
+                <td>{{$value->id_admin}}</td>
+                <td>{{$value->nama_admin}}</td>
+                <td>{{$value->jenis_kelamin}}</td>
+                <td>{{$value->alamat}}</td>
+                <td>{{$value->no_hp}}</td>
+                <td>
+                  <a href ="{{ url('admin/'.$value->id_admin.'/edit') }}">
+                  <button type="submit" class="btn btn-primary">EDIT</button></a>
+                </td>
+                <td>
+                    <form action="{{ url('admin/'.$value->id_admin) }}" method="POST">
+                    @method('delete')
+                    @csrf
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                    </form>
+                </td>
+              <tr>
+              @endforeach
+  
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
             </div>
           </div>
-
+   
         </div>
       </div>
     </section>

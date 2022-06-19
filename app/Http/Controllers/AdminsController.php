@@ -6,6 +6,10 @@ use App\Models\Admins;
 use Illuminate\Http\Request;
 use App\Http\Requests\AdminsRequest;
 use Illuminate\Support\Facades\File;
+use Illuminate\Database\Eloquent\Collection;
+//use App\Http\Controllers\PDF;
+use Barryvdh\DomPDF;
+use PDF;
 
 class AdminsController extends Controller
 {
@@ -20,6 +24,13 @@ class AdminsController extends Controller
         $model = admins::OrderBy('id_admin', 'asc')->paginate(10);
         //return $data_admins;
         return view('admin.index', compact('model'));
+    }
+
+    public function cetakAdmin()
+    {
+        $adminpdf = admins::all();
+        //return $data_admins;
+        return view('admin.cetak-admin', compact('adminpdf'));
     }
 
     /**
@@ -80,9 +91,10 @@ class AdminsController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function edit(admins $admins)
+    public function edit($idadmin)
     {
-        //
+        $admin = admins::find($idadmin);
+        return view('admin.edit', compact('admin'));
     }
 
     /**
@@ -92,9 +104,21 @@ class AdminsController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, admins $admins)
+    public function update(AdminsRequest $request, $idadmin)
     {
-        //
+        
+        //fungsi eloquent untuk mengupdate data inputan kita
+        $admin = admins::find($idadmin);
+            $admin->id_admin = $request->id_admin;
+            $admin->nama_admin = $request->nama_admin;
+            $admin->jenis_kelamin = $request->jenis_kelamin;
+            $admin->alamat = $request->alamat;
+            $admin->no_hp = $request->no_hp;
+            $admin->save();
+
+        //jika data berhasil diupdate, akan kembali ke halaman utama
+        return redirect()->route('admin.index')
+            ->with('success', 'admin Berhasil Diupdate');
     }
 
     /**
@@ -103,15 +127,25 @@ class AdminsController extends Controller
      * @param  \App\Models\admins  $admins
      * @return \Illuminate\Http\Response
      */
-    public function destroy(admins $admins)
+    public function destroy(admins $admin)
     {
-        //
-    }
-    public function cetak_pdf()
-    {
-        $model = admins::all();
+         //fungsi eloquent untuk menghapus data
+        //$model = admins::find($idadmin);
+        //$admins->delete();
+        //$admin->delete();
 
-        $pdf = PDF::loadview('admin_pdf',['admin.index'=>$model]);
-        return $pdf->stream();
+        admins::destroy($admin->id_admin);
+        return redirect()->route('admin.index')
+            -> with('success', 'admin Berhasil Dihapus');
+    }
+
+
+    public function pdf()
+    {
+        //$admin['coba'] =  "mencoba";
+        $admin = admins::all();
+
+        $pdf = PDF::loadView('admin.cetak_pdf', compact('admin'));
+        return $pdf->download('cetak_pdf.pdf');
     }
 }

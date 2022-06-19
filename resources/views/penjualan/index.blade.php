@@ -118,17 +118,17 @@
             </a>
           </li>
           <li>
-            <a href="tabel-pakan">
+            <a href="pakan">
               <i class="bi bi-circle"></i><span>Pakan</span>
             </a>
           </li>
           <li>
-            <a href="tabel-ternak">
+            <a href="ternak">
               <i class="bi bi-circle"></i><span>Ternak</span>
             </a>
           </li>
           <li>
-            <a href="tabel-gudang">
+            <a href="gudang">
               <i class="bi bi-circle"></i><span>Gudang</span>
             </a>
           </li>
@@ -187,6 +187,7 @@
         <div class="col-sm-6">
             <a href ="{{ url('penjualan/create') }}">
             <button type="submit" class="btn btn-primary">Tambah Penjualan</button>
+            <a href="{{ url('cetak-penjualan') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
         </div>
     </div>
 
@@ -200,42 +201,38 @@
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">ID Penjualan</th>
-                    <th scope="col">ID Admin</th>
-                    <th scope="col">ID Ternak</th>
-                    <th scope="col">ID Gudang</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Harga Unit</th>
-                    <th scope="col">Pembayaran</th>
-                    <th scope="col">Tanggal Beli</th>
-                  </tr>
+              <thead>
+                <tr>
+                  <th scope="col">ID Penjualan</th>
+                  <th scope="col">ID Admin</th>
+                  <th scope="col">ID Ternak</th>
+                  <th scope="col">ID Gudang</th>
+                  <th scope="col">Jumlah</th>
+                  <th scope="col">Harga Unit</th>
+                  <th scope="col">Pembayaran</th>
+                  <th scope="col">Tanggal Beli</th>
+                </tr>
 
-                  @foreach ($penjualan as $item)
-                  <tr>
-                    <td>{{$item->id_penjualan}}<td>
-                    <td>{{$item->id_admin}}<td>
-                    <td>{{$item->id_ternak}}<td>
-                    <td>{{$item->id_gudang}}<td>
-                    <td>{{$item->jumlah}}</td>
-                    <td>{{$item->harga_unit}}</td>
-                    <td>{{$item->pembayaran}}</td>
-                    <td>{{$item->tanggal_beli}}</td>
+                @foreach ($penjualan as $key => $item)
+                <tr>
+                  <td>{{$item->id_penjualan}}</td>
+                  <td>{{$item->id_admin}}</td>
+                  <td>{{$item->id_ternak}}</td>
+                  <td>{{$item->id_gudang}}</td>
+                  <td>{{$item->jumlah}}</td>
+                  <td>{{$item->harga_unit}}</td>
+                  <td>{{$item->pembayaran}}</td>
+                  <td>{{$item->tanggal_beli}}</td>
                   @endforeach
-                  </tr>
-                </thead>
+                <tr>
+              </thead>
               </table>
               <!-- End Table with stripped rows -->
-
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

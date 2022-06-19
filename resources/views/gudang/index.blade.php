@@ -191,6 +191,7 @@
 <div class="row mb-3">
         <div class="col-sm-6">    
       <a class="btn btn-primary" button type="submit" href="{{url('gudang/create') }}">Tambah Gudang</a>
+      <a href="{{ url('cetak-gudang') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
     </div>
 </div>
 
@@ -226,6 +227,18 @@
                 <td>{{$item->harga_unit}}</td>
                 <td>{{$item->tanggal_masuk}}</td>
                 <td>{{$item->tanggal_keluar}}</td>
+                <td>
+                      <a href ="{{ url('gudang/'.$item->id_gudang.'/edit') }}">
+                      <button type="submit" class="btn btn-primary">EDIT</button></a>
+                    </td>
+                    <td>
+                      <form action="{{ url('gudang/'.$item->id_gudang) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                      </form>
+                    </td> 
                 @endforeach
               <tr>
             </thead>

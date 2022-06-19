@@ -24,6 +24,12 @@ class PenjualanController extends Controller
         return view('penjualan.index', compact('penjualan'));
     }
 
+    public function cetakPenjualan()
+    {
+        $penjualanpdf = penjualan::all();
+        return view('penjualan.cetak-penjualan', compact('penjualanpdf'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

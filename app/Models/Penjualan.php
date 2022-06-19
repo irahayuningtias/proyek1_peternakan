@@ -23,16 +23,11 @@ class Penjualan extends Model
         'tanggal_beli'
 ];
     
-public function admins()
+public function penjualan()
 {
-    return $this->belongsTo(Admins::class);
+    return $this->hasMany(Admins::class);
+    return $this->hasMany(Ternak::class);
+    return $this->hasMany(Gudang::class);
 }
-public function ternak()
-{
-    return $this->belongsTo(Ternak::class);
-}
-public function gudang()
-{
-    return $this->belongsTo(Gudang::class);
-}
+
 }

@@ -10,6 +10,7 @@ class Ternak extends Model
     use HasFactory;
     protected $table='ternak';
     protected $primaryKey = 'id_ternak';
+    
     protected $fillable = [
         'id_ternak',
         'id_pakan',
@@ -21,11 +22,9 @@ class Ternak extends Model
     ];
 
 
-    public function admins(){
-        return $this->belongsTo(Admins::class);
+    public function ternak(){
+        return $this->hasMany(Admins::class);
+        return $this->hasMany(Pakan::class);
     }
 
-    public function pakan(){
-        return $this->belongsTo(Pakan::class);
-    }
 }
