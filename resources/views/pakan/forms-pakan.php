@@ -200,7 +200,8 @@
               <h5 class="card-title">Form Tambah Pakan</h5>
 
               <!-- General Form Elements -->
-              <form>
+              <form method="POST" action"{{ url('pakan') }}">
+                @csrf
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-0 col-form-label">ID Pakan</label>
                   <div class="col-sm-12">

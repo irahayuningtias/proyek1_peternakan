@@ -210,26 +210,26 @@
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th scope="col">ID Pakan</th>
-                    <th scope="col">ID Admin</th>
-                    <th scope="col">Nama Pakan</th>
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Tanggal Beli</th>
-                    <th scope="col">Tanggal Expired</th>
-                  </tr>
+            <thead>
+              <tr>
+                <th scope="col">ID Pakan</th>
+                <th scope="col">ID Admin</th>
+                <th scope="col">Nama Pakan</th>
+                <th scope="col">Jumlah</th>
+                <th scope="col">Tanggal Beli</th>
+                <th scope="col">Tanggal Expired</th>
+              </tr>
 
-                  @foreach ($pakans as $key=>$value)
-                  <tr>
-                    <td>{{$value->id_pakan}}<td>
-                    <td>{{$value->id_admin}}<td>
-                    <td>{{$value->nama_pakan}}</td>
-                    <td>{{$value->jumlah}}</td>
-                    <td>{{$value->tanggal_beli}}</td>
-                    <td>{{$value->tanggal_expired}}</td>
-                    @endforeach
-                  </tr>
+              @foreach ($pakans as $key => $item)
+              <tr>
+                <td>{{$item->id_pakan}}</td>
+                <td>{{$item->id_admin}}</td>
+                <td>{{$item->nama_pakan}}</td>
+                <td>{{$item->jumlah}}</td>
+                <td>{{$item->tanggal_beli}}</td>
+                <td>{{$item->tanggal_expired}}</td>
+                @endforeach
+              <tr>
 
                 </thead>
               </table>

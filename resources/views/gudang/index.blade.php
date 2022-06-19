@@ -213,7 +213,7 @@
                 <th scope="col">Jumlah</th>
                 <th scope="col">Harga Unit</th>
                 <th scope="col">Tanggal Masuk</th>
-                <th scope="col">Tanggal Keluar/th>
+                <th scope="col">Tanggal Keluar</th>
               </tr>
 
               @foreach ($gudang as $key => $item)
