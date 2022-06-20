@@ -1,4 +1,4 @@
-<div>    
+  
     <br/>
     <form method="POST" action="{{ url('pakan') }}" enctype="multipart/form-data">
         @csrf 
