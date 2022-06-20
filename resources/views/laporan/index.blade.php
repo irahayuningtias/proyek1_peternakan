@@ -152,7 +152,10 @@
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
           <a href="tabel-laporan">
-              <i class="bi bi-circle"></i><span>Data</span>
+              <i class="bi bi-circle"></i><span>Review Data</span>
+            </a>
+            <a href="charts">
+              <i class="bi bi-circle"></i><span>Diagram</span>
             </a>
           </li>
         </ul>
@@ -175,7 +178,6 @@
 
     <div class="pagetitle">
       <h1>Laporan</h1>
-      <a href="{{ url('cetak-laporan') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="dashboard">Home</a></li>
@@ -205,6 +207,16 @@
                     <th scope="col">Password</th>
                     <th scope="col">Foto</th>
                   </tr>
+
+                  @foreach ($model as $key => $value)
+              <tr>
+                <td>{{$value->id_admin}}</td>
+                <td>{{$value->nama_admin}}</td>
+                <td>{{$value->jenis_kelamin}}</td>
+                <td>{{$value->alamat}}</td>
+                <td>{{$value->no_hp}}</td>
+</tr>
+@endforeach
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -226,7 +238,15 @@
                     <th scope="col">Tanggal Beli</th>
                     <th scope="col">Tanggal Expired</th>
                   </tr>
-
+                  @foreach ($pakans as $key => $value) 
+                    <td scope="col">{{$value->id_pakan}}</td>
+                    <td scope="col">{{$value->id_admin}}</td>
+                    <td scope="col">{{$value->nama_pakan}}</td>
+                    <td scope="col">{{$value->jumlah}}</td>
+                    <td scope="col">{{$value->tanggal_beli}}</td>
+                    <td scope="col">{{$value->tanggal_expired}}</td>   
+</tr>
+@endforeach
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -249,6 +269,17 @@
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
 
+                  @foreach ($ternak as $key=>$item)
+                   <tr>
+                    <td>{{$item->id_ternak}}<td>
+                    <td>{{$item->id_pakan}}<td>
+                    <td>{{$item->id_admin}}<td>
+                     <td>{{$item->jumlah}}</td>
+                     <td>{{$item->jenis_ternak}}</td>
+                     <td>{{$item->tanggal_masuk}}</td>
+                     <td>{{$item->tanggal_keluar}}</td>
+</tr>
+@endforeach
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -270,7 +301,18 @@
                     <th scope="col">Tanggal Masuk</th>
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
-
+                  @foreach ($gudang as $key => $item)
+              <tr>
+                <td>{{$item->id_gudang}}</td>
+                <td>{{$item->id_ternak}}</td>
+                <td>{{$item->id_admin}}</td>
+                <td>{{$item->jenis_hasil}}</td>
+                <td>{{$item->jumlah}}</td>
+                <td>{{$item->harga_unit}}</td>
+                <td>{{$item->tanggal_masuk}}</td>
+                <td>{{$item->tanggal_keluar}}</td>
+</tr>
+@endforeach
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -295,7 +337,17 @@
                     <th scope="col">Pembayaran</th>
                     <th scope="col">Tanggal Beli</th>
                   </tr>
-
+                  @foreach ($penjualan as $key => $item)
+                <tr>
+                  <td>{{$item->id_penjualan}}</td>
+                  <td>{{$item->id_admin}}</td>
+                  <td>{{$item->id_ternak}}</td>
+                  <td>{{$item->id_gudang}}</td>
+                  <td>{{$item->jumlah}}</td>
+                  <td>{{$item->harga_unit}}</td>
+                  <td>{{$item->pembayaran}}</td>
+                  <td>{{$item->tanggal_beli}}</td>
+                  @endforeach
                 </thead>
               </table>
               <!-- End Table with stripped rows -->

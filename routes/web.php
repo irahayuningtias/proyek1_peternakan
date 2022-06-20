@@ -6,6 +6,7 @@ use App\Http\Controllers\PakanController;
 use App\Http\Controllers\TernakController;
 use App\Http\Controllers\GudangController;
 use App\Http\Controllers\PenjualanController;
+use App\Http\Controllers\LaporanController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\PDF;
 
@@ -56,11 +57,11 @@ Route::get('/contact', function () {
 Route::get('/faq', function () {
     return view('more/faq');
 });
-Route::get('/tabel-laporan', function () {
-    return view('table/tabel-laporan');
-});
+// Route::get('/tabel-laporan', function () {
+//     return view('table/tabel-laporan');
+// });
 Route::get('/charts', function () {
-    return view('charts');
+    return view('laporan.charts');
 });
 Route::resource('penjualan', PenjualanController::class);
 Route::resource('gudang', GudangController::class);
@@ -68,7 +69,7 @@ Route::resource('pakan', PakanController::class);
 Route::resource('ternak', TernakController::class);
 Route::resource('admin', AdminsController::class);
 
-
+Route::resource('laporan', LaporanController::class);
 
 //ini route untuk CRUD tabel Admin
 //Route::resource('tabel-admin', AdminsController::class);
@@ -95,4 +96,5 @@ Route::get('cetak-pakan',[PakanController::class, 'cetakPakan']);
 Route::get('cetak-ternak',[TernakController::class, 'cetakTernak']);
 Route::get('cetak-gudang',[GudangController::class, 'cetakGudang']);
 Route::get('cetak-penjualan',[PenjualanController::class, 'cetakPenjualan']);
-Route::resource('cetak-laporan', LaporanController::class);
+
+

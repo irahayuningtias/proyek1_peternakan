@@ -13,6 +13,27 @@ use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
+
+    public function index()
+    {
+        $model = admins::all();
+        $model = admins::OrderBy('id_admin', 'asc')->paginate(10);
+
+        $pakans = pakan::all();
+        $pakans = pakan::OrderBy('id_pakan', 'asc')->paginate(10);
+
+        $gudang = gudang::all();
+        $gudang = gudang::OrderBy('id_gudang', 'asc')->paginate(10);
+
+        $ternak = Ternak::all();
+        $ternak = Ternak::OrderBy('id_ternak', 'asc')->paginate(10);
+
+        $penjualan = penjualan::all();
+        $penjualan = penjualan::OrderBy('id_penjualan', 'asc')->paginate(10);
+        return view('laporan.index', compact('model', 'pakans', 'gudang', 'ternak', 'penjualan'));
+    }
+
+
     public function cetakAdmin()
     {
         $adminpdf = admins::all();

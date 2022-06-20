@@ -96,4 +96,16 @@ class PenjualanController extends Controller
     {
         //
     }
+
+    public function chartPenjualan($idpenjualan) {
+        $penjualan = penjualan::find($idpenjualan);
+        $categories = [];
+        foreach($penjualan as $p)
+        {
+            $categories[] = $p->pembayaran;
+        }
+       //dd($categories);
+        return view('penjualan.charts', compact('penjualan', 'categories'));
+        
+    }
 }
