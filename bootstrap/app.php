@@ -1,4 +1,5 @@
 <?php
+
 /*
 |--------------------------------------------------------------------------
 | Create The Application
@@ -39,23 +40,6 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
-
-/*
-|---------------------
-|   Convert TO PDF
-|---------------------
-
-
-'providers' => [
-	....
-	Barryvdh\DomPDF\ServiceProvider::class,
-],
-  
-'aliases' => [
-	....
-	'PDF' => Barryvdh\DomPDF\Facade::class,
-]
-*/
 
 /*
 |--------------------------------------------------------------------------

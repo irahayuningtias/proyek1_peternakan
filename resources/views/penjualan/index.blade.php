@@ -223,6 +223,19 @@
                   <td>{{$item->harga_unit}}</td>
                   <td>{{$item->pembayaran}}</td>
                   <td>{{$item->tanggal_beli}}</td>
+                  <td>
+                    <a href ="{{ url('penjualan/'.$item->id_penjualan.'/edit') }}">
+                    <button type="submit" class="btn btn-primary">EDIT</button></a>
+                  </td>
+                  <td>
+                      <form action="{{ url('penjualan/'.$item->id_penjualan) }}" method="POST">
+                      @method('delete')
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                  </form>
+                </td>
+              <tr>
                   @endforeach
                 <tr>
               </thead>

@@ -327,7 +327,6 @@
               <table class="table datatable">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
                     <th scope="col">ID Penjualan</th>
                     <th scope="col">ID Admin</th>
                     <th scope="col">ID Ternak</th>

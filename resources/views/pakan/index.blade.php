@@ -212,7 +212,6 @@
               <!-- Table with stripped rows -->
             
               <table class="table datatable">
-<<<<<<< HEAD
             <thead>
               <tr>
                 <th scope="col">ID Pakan</th>
@@ -234,46 +233,6 @@
                 @endforeach
               <tr>
 
-=======
-              <thead>
-                  <tr>
-                    <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th> 
-                    <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th> 
-                    <!-- <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</th>  -->
-                    <th scope="col">ID Pakan</th> 
-                    <!-- <th scope="col">&emsp;&emsp;&emsp;</th>     -->
-                    <th scope="col">ID Admin</th> 
-                    <!-- <th scope="col">&emsp;&emsp;&emsp;&emsp;&emsp;</th>                    -->
-                    <th scope="col">Nama Pakan</th>                  
-                    <th scope="col">Jumlah</th>
-                    <th scope="col">Tanggal Beli</th>
-                    <th scope="col">Tanggal Expired</th>                         
-                  </tr>
-                
-                  <tr>
-                  @foreach ($pakans as $key => $value) 
-                    <td scope="col">{{$value->id_pakan}}</td>
-                    <td scope="col">{{$value->id_admin}}</td>
-                    <td scope="col">{{$value->nama_pakan}}</td>
-                    <td scope="col">{{$value->jumlah}}</td>
-                    <td scope="col">{{$value->tanggal_beli}}</td>
-                    <td scope="col">{{$value->tanggal_expired}}</td>   
-                  <td>
-                      <a href ="{{ url('pakan/'.$value->id_pakan.'/edit') }}">
-                      <button type="submit" class="btn btn-primary">EDIT</button></a>
-                    </td>
-                    <td>
-                      <form action="{{ url('pakan/'.$value->id_pakan) }}" method="POST">
-                      @method('delete')
-                      @csrf
-                      <input type="hidden" name="_method" value="DELETE">
-                      <button class="btn btn-danger" type="submit">HAPUS</button></input>
-                      </form>
-                    </td> 
-                  
-                  </tr>
-                  @endforeach         
->>>>>>> 3c737c71784d2e2eb5d668000499da00224c79e3
                 </thead>
               </table>
           </div>

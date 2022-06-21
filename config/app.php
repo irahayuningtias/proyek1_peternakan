@@ -174,13 +174,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-<<<<<<< HEAD
-        //Barryvdh\DomPDF\ServiceProvider::class,
-=======
-        //provider untuk dompdf
-        Barryvdh\DomPDF\ServiceProvider::class,
-        
->>>>>>> 3c737c71784d2e2eb5d668000499da00224c79e3
 
     ],
 
@@ -236,7 +229,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'PDF' => Barryvdh\DomPDF\Facade::class,
 
     ],
 
