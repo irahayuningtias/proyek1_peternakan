@@ -157,8 +157,11 @@
     <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
       <a href="tabel-laporan">
-          <i class="bi bi-circle"></i><span>Data</span>
-        </a>
+              <i class="bi bi-circle"></i><span>Review Data</span>
+            </a>
+            <a href="charts">
+              <i class="bi bi-circle"></i><span>Diagram</span>
+            </a>
       </li>
     </ul>
   </li>
@@ -238,7 +241,7 @@
                       colors: ['transparent']
                     },
                     xaxis: {
-                      categories: ['jan', 'feb', 'mar', 'april', 'mei', 'juni', 'juli', 'agustus', 'september', 'oktober', 'november', 'desember']
+                      categories: ['Jan', 'Feb', 'Mar', 'April', 'Mei', 'Juni', 'Juli', 'Agt', 'Sep', 'Okt', 'Nov', 'Des']
                     },
                     yaxis: {
                       title: {

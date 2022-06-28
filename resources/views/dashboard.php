@@ -152,8 +152,11 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="laporan">
-              <i class="bi bi-circle"></i><span>Data</span>
+          <a href="tabel-laporan">
+              <i class="bi bi-circle"></i><span>Review Data</span>
+            </a>
+            <a href="charts">
+              <i class="bi bi-circle"></i><span>Diagram</span>
             </a>
           </li>
         </ul>
