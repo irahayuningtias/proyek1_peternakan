@@ -43,7 +43,7 @@
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-    
+
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -203,22 +203,34 @@
                     <th scope="col">Nama</th>
                     <th scope="col">Jenis Kelamin</th>
                     <th scope="col">Alamat</th>
-                    <th scope="col">No. Telepon</th>
-                    <th scope="col">Password</th>
-                    <th scope="col">Foto</th>
+                    <th scope="col">Nomor Telepon</th>
+
                   </tr>
 
                   @foreach ($model as $key => $value)
-              <tr>
-                <td>{{$value->id_admin}}</td>
-                <td>{{$value->nama_admin}}</td>
-                <td>{{$value->jenis_kelamin}}</td>
-                <td>{{$value->alamat}}</td>
-                <td>{{$value->no_hp}}</td>
-</tr>
-@endforeach
-                </thead>
-              </table>
+                  <tr>
+                    <td>{{$value->id_admin}}</td>
+                    <td>{{$value->nama_admin}}</td>
+                    <td>{{$value->jenis_kelamin}}</td>
+                    <td>{{$value->alamat}}</td>
+                    <td>{{$value->no_hp}}</td>
+                    <td>
+                      <a href ="{{ url('admin/'.$value->id_admin.'/edit') }}">
+                      <button type="submit" class="btn btn-primary">EDIT</button></a>
+                    </td>
+                    <td>
+                        <form action="{{ url('admin/'.$value->id_admin) }}" method="POST">
+                        @method('delete')
+                        @csrf
+                        <input type="hidden" name="_method" value="DELETE">
+                        <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                        </form>
+                    </td>
+                  <tr>
+                  @endforeach
+
+                    </thead>
+                  </table>
               <!-- End Table with stripped rows -->
         </div>
         </div>
@@ -233,22 +245,26 @@
                 <thead>
                   <tr>
                     <th scope="col">ID Pakan</th>
+                    <th scope="col">ID Admin</th>
                     <th scope="col">Nama Pakan</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Tanggal Beli</th>
                     <th scope="col">Tanggal Expired</th>
                   </tr>
-                  @foreach ($pakans as $key => $value) 
-                    <td scope="col">{{$value->id_pakan}}</td>
-                    <td scope="col">{{$value->id_admin}}</td>
-                    <td scope="col">{{$value->nama_pakan}}</td>
-                    <td scope="col">{{$value->jumlah}}</td>
-                    <td scope="col">{{$value->tanggal_beli}}</td>
-                    <td scope="col">{{$value->tanggal_expired}}</td>   
-</tr>
-@endforeach
-                </thead>
-              </table>
+
+                  @foreach ($pakans as $key => $item)
+                  <tr>
+                    <td>{{$item->id_pakan}}</td>
+                    <td>{{$item->id_admin}}</td>
+                    <td>{{$item->nama_pakan}}</td>
+                    <td>{{$item->jumlah}}</td>
+                    <td>{{$item->tanggal_beli}}</td>
+                    <td>{{$item->tanggal_expired}}</td>
+                    @endforeach
+                  <tr>
+
+                    </thead>
+                  </table>
               <!-- End Table with stripped rows -->
               </div>
         </div>
@@ -295,24 +311,39 @@
                 <thead>
                   <tr>
                     <th scope="col">ID Gudang</th>
+                    <th scope="col">ID Ternak</th>
+                    <th scope="col">ID Admin</th>
                     <th scope="col">Jenis Hasil Ternak</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Harga Unit</th>
                     <th scope="col">Tanggal Masuk</th>
                     <th scope="col">Tanggal Keluar</th>
                   </tr>
+
                   @foreach ($gudang as $key => $item)
-              <tr>
-                <td>{{$item->id_gudang}}</td>
-                <td>{{$item->id_ternak}}</td>
-                <td>{{$item->id_admin}}</td>
-                <td>{{$item->jenis_hasil}}</td>
-                <td>{{$item->jumlah}}</td>
-                <td>{{$item->harga_unit}}</td>
-                <td>{{$item->tanggal_masuk}}</td>
-                <td>{{$item->tanggal_keluar}}</td>
-</tr>
-@endforeach
+                  <tr>
+                    <td>{{$item->id_gudang}}</td>
+                    <td>{{$item->id_ternak}}</td>
+                    <td>{{$item->id_admin}}</td>
+                    <td>{{$item->jenis_hasil}}</td>
+                    <td>{{$item->jumlah}}</td>
+                    <td>{{$item->harga_unit}}</td>
+                    <td>{{$item->tanggal_masuk}}</td>
+                    <td>{{$item->tanggal_keluar}}</td>
+                    <td>
+                          <a href ="{{ url('gudang/'.$item->id_gudang.'/edit') }}">
+                          <button type="submit" class="btn btn-primary">EDIT</button></a>
+                        </td>
+                        <td>
+                          <form action="{{ url('gudang/'.$item->id_gudang) }}" method="POST">
+                          @method('delete')
+                          @csrf
+                          <input type="hidden" name="_method" value="DELETE">
+                          <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                          </form>
+                        </td>
+                    @endforeach
+                  <tr>
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
@@ -329,24 +360,36 @@
                   <tr>
                     <th scope="col">ID Penjualan</th>
                     <th scope="col">ID Admin</th>
-                    <th scope="col">ID Ternak</th>
                     <th scope="col">ID Gudang</th>
                     <th scope="col">Jumlah</th>
                     <th scope="col">Harga Unit</th>
                     <th scope="col">Pembayaran</th>
                     <th scope="col">Tanggal Beli</th>
                   </tr>
+
                   @foreach ($penjualan as $key => $item)
-                <tr>
-                  <td>{{$item->id_penjualan}}</td>
-                  <td>{{$item->id_admin}}</td>
-                  <td>{{$item->id_ternak}}</td>
-                  <td>{{$item->id_gudang}}</td>
-                  <td>{{$item->jumlah}}</td>
-                  <td>{{$item->harga_unit}}</td>
-                  <td>{{$item->pembayaran}}</td>
-                  <td>{{$item->tanggal_beli}}</td>
-                  @endforeach
+                  <tr>
+                    <td>{{$item->id_penjualan}}</td>
+                    <td>{{$item->id_admin}}</td>
+                    <td>{{$item->id_gudang}}</td>
+                    <td>{{$item->jumlah_terjual}}</td>
+                    <td>{{$item->harga_jual}}</td>
+                    <td>{{$item->pembayaran}}</td>
+                    <td>{{$item->tanggal_terjual}}</td>
+                    <td>
+                          <a href ="{{ url('ternak/'.$item->id_ternak.'/edit') }}">
+                          <button type="submit" class="btn btn-primary">EDIT</button></a>
+                        </td>
+                        <td>
+                          <form action="{{ url('ternak/'.$item->id_ternak) }}" method="POST">
+                          @method('delete')
+                          @csrf
+                          <input type="hidden" name="_method" value="DELETE">
+                          <button class="btn btn-danger" type="submit">HAPUS</button></input>
+                          </form>
+                        </td>
+                    @endforeach
+                  <tr>
                 </thead>
               </table>
               <!-- End Table with stripped rows -->
