@@ -16,7 +16,7 @@
                     <th>updated_at</th>
                     <th>created_at</th>
                 </tr>
-                
+                <!--  -->
                 <!-- @foreach ('$admin => $item')
                 <tr>
                 <td> {{ $item->id_admin }} </td>
