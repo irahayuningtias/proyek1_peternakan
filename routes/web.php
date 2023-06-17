@@ -33,7 +33,7 @@ Route::get('/register', function () {
     return view('more/register');
 });
 Route::get('/profile', function () {
-    return view('more/profile');
+    return view('profile');
 });
 Route::get('/contact', function () {
     return view('more/contact');
