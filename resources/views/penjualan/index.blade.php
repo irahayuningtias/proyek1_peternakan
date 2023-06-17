@@ -43,7 +43,7 @@
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
-    
+
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
@@ -71,7 +71,7 @@
         </li>
 
         <li>
-            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+            <a class="dropdown-item d-flex align-items-center" href="profile">
             <i class="bi bi-person"></i>
             <span>My Profile</span>
             </a>
@@ -235,7 +235,7 @@
                       <input type="hidden" name="_method" value="DELETE">
                       <button class="btn btn-danger" type="submit">HAPUS</button></input>
                       </form>
-                    </td> 
+                    </td>
                 @endforeach
               <tr>
             </thead>

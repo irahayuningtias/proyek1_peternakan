@@ -76,7 +76,7 @@
     </li>
 
     <li>
-        <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+        <a class="dropdown-item d-flex align-items-center" href="profile">
         <i class="bi bi-person"></i>
         <span>My Profile</span>
         </a>
@@ -192,7 +192,7 @@
 </div><!-- End Page Title -->
 
 <div class="row mb-3">
-        <div class="col-sm-6">    
+        <div class="col-sm-6">
       <a class="btn btn-primary" button type="submit" href="{{url('ternak/create') }}">Tambah Ternak</a>
       <a href="{{ url('cetak-ternak') }}" target="_blank" class="btn btn-primary">Cetak Data <i class="fa-solid fa-print"></i></a>
     </div>
@@ -239,7 +239,7 @@
                       <input type="hidden" name="_method" value="DELETE">
                       <button class="btn btn-danger" type="submit">HAPUS</button></input>
                       </form>
-                    </td> 
+                    </td>
                 @endforeach
               <tr>
             </thead>
