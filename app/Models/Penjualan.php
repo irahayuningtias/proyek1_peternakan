@@ -27,7 +27,7 @@ public function penjualan()
 {
     return $this->hasMany(Admins::class);
     return $this->hasMany(Ternak::class);
-    return $this->hasMany(Gudang::class);
+    return $this->hasMany(gudang::class);
 }
 
 }

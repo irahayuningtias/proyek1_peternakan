@@ -2,15 +2,15 @@
 
 namespace App\Models;
 
-use App\Models\gudang;
+use App\Models\Gudang;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class gudang extends Model
+class Gudang extends Model
 {
     use HasFactory;
 
-    protected $table='gudang';
+    protected $table='Gudang';
     protected $primaryKey = 'id_gudang';
     protected $fillable = [
         'id_gudang', 
