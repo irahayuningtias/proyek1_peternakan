@@ -19,7 +19,7 @@
                 
                 <!-- @foreach ('$admin => $item') -->
                 <tr>
-                    <td> {{ $->id_admin}} </td>
+                    <td> {{ $item->id_admin}} </td>
                     <td> {{ $item->nama_admin }} </td>
                     <td> {{ $item->jenis_kelamin }} </td>  
                     <td> {{ $item->alamat }} </td>
