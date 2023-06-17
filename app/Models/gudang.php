@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
+<<<<<<< HEAD
 use App\Models\Gudang;
+=======
+>>>>>>> 103d15c71387173374f6cd6c2b4a43a7c3e423c9
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

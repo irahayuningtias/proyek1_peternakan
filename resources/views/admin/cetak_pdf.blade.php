@@ -16,10 +16,10 @@
                     <th>updated_at</th>
                     <th>created_at</th>
                 </tr>
-                
-                <!-- @foreach ('$admin => $item') -->
+                <!--  -->
+                <!-- @foreach ('$admin => $item')
                 <tr>
-                    <td> {{ $item->id_admin}} </td>
+                <td> {{ $item->id_admin }} </td>
                     <td> {{ $item->nama_admin }} </td>
                     <td> {{ $item->jenis_kelamin }} </td>  
                     <td> {{ $item->alamat }} </td>
@@ -27,7 +27,7 @@
                     <td> {{ $item->updated_at}} </td>
                     <td> {{ $item->created_at }} </td>
                 </tr>
-                <!-- @endforeach -->
+                @endforeach -->
             </table>
         </div>
     </div>
