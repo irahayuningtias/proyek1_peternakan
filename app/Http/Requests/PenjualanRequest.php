@@ -24,10 +24,10 @@ class PenjualanRequest extends FormRequest
             'id_admin'      => 'required',
             'id_ternak'     => 'required',
             'id_gudang'     => 'required',
-            'jumlah'        => 'required',
-            'harga_unit'    => 'required',
+            'jumlah_terjual'        => 'required',
+            'harga_jual'    => 'required',
+            'tanggal_terjual'  => 'required',
             'pembayaran'    => 'required',
-            'tanggal_beli'  => 'required'
         ];
     }
 }

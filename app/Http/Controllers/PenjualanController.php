@@ -48,10 +48,10 @@ class PenjualanController extends Controller
         $model->id_admin = $request->id_admin;
         $model->id_ternak = $request->id_ternak;
         $model->id_gudang = $request->id_gudang;
-        $model->jumlah = $request->jumlah;
-        $model->harga_unit = $request->harga_unit;
+        $model->jumlah_terjual = $request->jumlah;
+        $model->harga_jual = $request->harga_unit;
+        $model->tanggal_terjual = $request->tanggal_beli;
         $model->pembayaran = $request->pembayaran;
-        $model->tanggal_beli = $request->tanggal_beli;
         $model->save();
         
         return redirect()->route('penjualan')

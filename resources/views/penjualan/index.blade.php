@@ -204,45 +204,42 @@
 
               <!-- Table with stripped rows -->
               <table class="table datatable">
-              <thead>
-                <tr>
-                  <th scope="col">ID Penjualan</th>
-                  <th scope="col">ID Admin</th>
-                  <th scope="col">ID Ternak</th>
-                  <th scope="col">ID Gudang</th>
-                  <th scope="col">Jumlah</th>
-                  <th scope="col">Harga Unit</th>
-                  <th scope="col">Pembayaran</th>
-                  <th scope="col">Tanggal Beli</th>
-                </tr>
+            <thead>
+              <tr>
+                <th scope="col">ID Penjualan</th>
+                <th scope="col">ID Admin</th>
+                <th scope="col">ID Gudang</th>
+                <th scope="col">Jumlah</th>
+                <th scope="col">Harga Unit</th>
+                <th scope="col">Pembayaran</th>
+                <th scope="col">Tanggal Beli</th>
+              </tr>
 
-                @foreach ($penjualan as $key => $item)
-                <tr>
-                  <td>{{$item->id_penjualan}}</td>
-                  <td>{{$item->id_admin}}</td>
-                  <td>{{$item->id_ternak}}</td>
-                  <td>{{$item->id_gudang}}</td>
-                  <td>{{$item->jumlah}}</td>
-                  <td>{{$item->harga_unit}}</td>
-                  <td>{{$item->pembayaran}}</td>
-                  <td>{{$item->tanggal_beli}}</td>
-                  <td>
-                    <a href ="{{ url('penjualan/'.$item->id_penjualan.'/edit') }}">
-                    <button type="submit" class="btn btn-primary">EDIT</button></a>
-                  </td>
-                  <td>
-                      <form action="{{ url('penjualan/'.$item->id_penjualan) }}" method="POST">
+              @foreach ($penjualan as $key => $item)
+              <tr>
+                <td>{{$item->id_penjualan}}</td>
+                <td>{{$item->id_admin}}</td>
+                <td>{{$item->id_gudang}}</td>
+                <td>{{$item->jumlah_terjual}}</td>
+                <td>{{$item->harga_jual}}</td>
+                <td>{{$item->pembayaran}}</td>
+                <td>{{$item->tanggal_terjual}}</td>
+                <td>
+                      <a href ="{{ url('ternak/'.$item->id_ternak.'/edit') }}">
+                      <button type="submit" class="btn btn-primary">EDIT</button></a>
+                    </td>
+                    <td>
+                      <form action="{{ url('ternak/'.$item->id_ternak) }}" method="POST">
                       @method('delete')
                       @csrf
                       <input type="hidden" name="_method" value="DELETE">
                       <button class="btn btn-danger" type="submit">HAPUS</button></input>
-                  </form>
-                </td>
+                      </form>
+                    </td> 
+                @endforeach
               <tr>
-                  @endforeach
-                <tr>
-              </thead>
-              </table>
+            </thead>
+          </table>
               <!-- End Table with stripped rows -->
             </div>
           </div>

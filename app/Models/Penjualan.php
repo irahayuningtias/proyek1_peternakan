@@ -16,10 +16,10 @@ class Penjualan extends Model
         'id_admin',
         'id_ternak',
         'id_gudang',
-        'jumlah',
-        'harga_unit',
+        'jumlah_terjual',
+        'harga_jual',
+        'tanggal_terjual',
         'pembayaran',
-        'tanggal_beli'
 ];
     
 public function penjualan()
